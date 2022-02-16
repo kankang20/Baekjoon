@@ -29,19 +29,14 @@ public class Prob1000 {
 
         // OPTION 2 : 120ms 14204KB
 
-        StringTokenizer st1 = new StringTokenizer (str, " ");
+        StringTokenizer st = new StringTokenizer (str, " ");
 
-        int a_token1 = Integer.parseInt (st1.nextToken());
-        int b_token1 = Integer.parseInt (st1.nextToken());
+        int a_token = Integer.parseInt (st.nextToken());
+        int b_token = Integer.parseInt (st.nextToken());
 
-        System.out.println(a_token1 + b_token1);
+        System.out.println(a_token + b_token);
 
         // OPTION 3 : 124ms 14236KB
-
-        StringTokenizer st2 = new StringTokenizer (str, " ");
-
-        int a_token2 = Integer.parseInt (st2.nextToken());
-        int b_token2 = Integer.parseInt (st2.nextToken());
 
         BufferedWriter bw = new BufferedWriter (new OutputStreamWriter (System.out));
 
@@ -50,7 +45,7 @@ public class Prob1000 {
          * String result = String.valueOf(a_token + b_token);
          */
 
-        bw.write(Integer.toString(a_token2 + b_token2));
+        bw.write(Integer.toString(a_token + b_token));
         bw.flush();
         bw.close();
         
