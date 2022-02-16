@@ -60,5 +60,4 @@ public class Prob1000 {
 
         System.out.println(a_split + b_split);
     }
-    
 }
