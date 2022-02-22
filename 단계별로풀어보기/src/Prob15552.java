@@ -5,15 +5,15 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Prob10950 {
+public class Prob15552 {
     public static void main(String[] args) throws IOException {
 
-        // OPTION 1 : 132ms 14296KB
+        // OPTION 1 : 852ms 238432KB
         
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
 
         int num = Integer.parseInt(br.readLine());
-
+    
         BufferedWriter bw = new BufferedWriter (new OutputStreamWriter(System.out));
 
         for (int i = 0; i < num; i++) {
@@ -25,11 +25,8 @@ public class Prob10950 {
 
             bw.write(Integer.toString(a+b));
             bw.newLine();
-            bw.flush();
-              
         }
 
-        // OPTION 2 : 128ms 14192KB
         bw.flush();
 
         bw.close();
