@@ -20,7 +20,6 @@ public class Prob1157 {
         Character max_key = ' ';
         int max_value = 0;
         
-
         for (int i = 0; i < text.length(); i++) {
             
             char ch = text.charAt(i);

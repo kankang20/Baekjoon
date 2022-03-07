@@ -14,7 +14,6 @@ public class Prob2675 {
         int repeat = Integer.parseInt(br.readLine());
 
         // TO 다른 방법이 있을까? 우선 다른 맞힌사람 코드 보면 나랑 비슷한거 같은데
-
         // OPTION 1 : 124ms 14056KB
 
         for (int i = 0; i < repeat; i++) {
