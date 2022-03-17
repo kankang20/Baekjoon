@@ -9,7 +9,7 @@ public class Prob1157 {
     public static void main(String[] args) throws IOException {
         
         // OPTION 1 : 404ms 36900KB
-        // TO 시간이 너무 걸린다.. Map말고 다른 방버이 있을까? 아니면 Map을 좀 효율적으로 쓸수는 없을까
+        // TO 시간이 너무 걸린다.. Map말고 다른 방법이 있을까? 아니면 Map을 좀 효율적으로 쓸수는 없을까
         
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
