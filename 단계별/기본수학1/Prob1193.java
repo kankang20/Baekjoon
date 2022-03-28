@@ -7,36 +7,30 @@ import java.io.InputStreamReader;
 public class Prob1193 {
     public static void main(String[] args) throws IOException {
        
+        // OPTION 1 : 160ms 16056KB
+        
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
         int num = Integer.parseInt(br.readLine());
 
-        int i = num;          
-        int count = 0;      // 대각선 칸 개수   // 분자와 분수의 합은 count+1
-        int sum = 0;
+        int cross_count = 1;
+        int previous_count = 0;
 
         while (true) {
 
-            count++;
-            i -= count;
-            sum += count;
-            
-            if (i <= 0) {
+            if (cross_count + previous_count >= num) {
                 
-                // if (count % 2 == 0) {
-                //     count++;
-                    
-
-                // } else {
-                //     count++;
-                // } break;
-            
-                break;
+                if (cross_count % 2 == 0) {
+                    sb.append((num - previous_count) + "/" + (cross_count - (num - previous_count - 1)));
+                } else {
+                    sb.append((cross_count - (num - previous_count - 1)) + "/" + (num - previous_count));
+                } break;
             }
-        }
 
-        sb.append(count + " " + sum);
+            previous_count += cross_count;
+            cross_count += 1;
+        }
         
         System.out.println(sb);
         br.close();
