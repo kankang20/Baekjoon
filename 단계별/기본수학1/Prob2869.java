@@ -8,8 +8,6 @@ import java.util.StringTokenizer;
 public class Prob2869 {
     public static void main(String[] args) throws IOException {
        
-        // 시간초과
-        
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
@@ -19,17 +17,25 @@ public class Prob2869 {
         int b = Integer.parseInt(st.nextToken());
         int v = Integer.parseInt(st.nextToken());
 
-        int count = 0;
+        // 시간초과
 
-        while (true) {
-            count++;
-            v -= a;
-            if (v<=0) break;
-            v += b;
-        }
+        // int count = 0;
+
+        // while (true) {
+        //     count++;
+        //     v -= a;
+        //     if (v<=0) break;
+        //     v += b;
+        // }
+
+        // OPTION 1 : 124ms 14112KB
+
+        int count = (v - b) / (a - b);
+
+        if ((v - b) % (a - b) != 0) count++;
 
         sb.append(count);
-
+        
         System.out.println(sb);
         br.close();
     }
