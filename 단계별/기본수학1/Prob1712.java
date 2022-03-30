@@ -7,6 +7,8 @@ import java.util.StringTokenizer;
 
 public class Prob1712 {
     public static void main(String[] args) throws IOException {
+
+        // OPTION 1 : 120ms 14164KB
         
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();

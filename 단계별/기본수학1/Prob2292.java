@@ -8,7 +8,6 @@ public class Prob2292 {
     public static void main(String[] args) throws IOException {
         
         // OPTION 1 : 124ms 14344KB
-        // 다른 코드는 어떻게 할 수 있을까.잘 모르겠지만 다른 방법도 가능할 수도 있으니까 
 
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
