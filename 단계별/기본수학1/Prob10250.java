@@ -9,7 +9,7 @@ public class Prob10250 {
     public static void main(String[] args) throws IOException {
        
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
-
+        
         int num = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < num; i++) {
@@ -17,7 +17,7 @@ public class Prob10250 {
             StringTokenizer st = new StringTokenizer(br.readLine());
 
             int height = Integer.parseInt(st.nextToken());
-            String width = st.nextToken();
+            String width = st.nextToken();                  // st.nextToken(); 으로만으로도 넘기는거 가능
             int number = Integer.parseInt(st.nextToken());
 
             // OPTION 1 : 132ms 14288KB
@@ -35,12 +35,13 @@ public class Prob10250 {
 
             // OPTION 2 : 140ms 14316KB
 
-            // if (number % height == 0) {
-            //     System.out.println(height*100 + (number/height));
-            // } else {
-            //     System.out.println((number%height)*100 + (number/height) + 1);
-            // }
+            if (number % height == 0) {
+                System.out.println(height*100 + (number/height));
+            } else {
+                System.out.println((number%height)*100 + (number/height) + 1);
+            }
         }
+        
         br.close();
     }
 }
