@@ -40,8 +40,7 @@ public class Prob10250 {
             } else {
                 System.out.println((number%height)*100 + (number/height) + 1);
             }
-        }
-        
+        }        
         br.close();
     }
 }
