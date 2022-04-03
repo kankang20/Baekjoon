@@ -17,7 +17,7 @@ public class Prob10250 {
             StringTokenizer st = new StringTokenizer(br.readLine());
 
             int height = Integer.parseInt(st.nextToken());
-            String width = st.nextToken();                  // st.nextToken(); 으로만으로도 넘기는거 가능
+            st.nextToken();                  // String width = st.nextToken(); 
             int number = Integer.parseInt(st.nextToken());
 
             // OPTION 1 : 132ms 14288KB
