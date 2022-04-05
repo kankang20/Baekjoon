@@ -17,12 +17,12 @@ public class Prob10757 {
 
         // OPTION 1 : 248ms 17236KB
 
-        BigInteger BigNum1 = new BigInteger(str.nextToken());
-        BigInteger BigNum2 = new BigInteger(str.nextToken());
+        // BigInteger BigNum1 = new BigInteger(str.nextToken());
+        // BigInteger BigNum2 = new BigInteger(str.nextToken());
 
-        sb.append(BigNum1.add(BigNum2));
+        // sb.append(BigNum1.add(BigNum2));
 
-        // TO 직접 덧셈을 구현하는 방법
+        // FIX  왜 정답이 아닌지 이유를 모르겠음. 실행 결과는 잘 나오는거 같은데
         // OPTION 2 : 
 
         String num1 = str.nextToken();
@@ -33,18 +33,30 @@ public class Prob10757 {
         int[] List1 = new int[max];
         int[] List2 = new int[max];
 
-        int[] LastList = new int[Math.max(num1.length(), num2.length()) + 1];
-
         for (int i = 0; i < num1.length(); i++) {
-            List1[i] = num1.charAt(i) - '0';
+            List1[max - 1 - i] = num1.charAt(i) - '0';
         }
 
         for (int i = 0; i < num2.length(); i++) {
-            List2[i] = num2.charAt(i) - '0';
+            List2[max - 1 - i] = num2.charAt(i) - '0';
         }
 
-        sb.append(Arrays.toString(List1) + "\n");
-        sb.append(Arrays.toString(List2));
+        int[] LastList = new int[max + 1];
+
+        for (int i = 0; i < max; i++) {
+            int sum = List1[i] + List2[i];
+
+            LastList[i+1] += sum / 10;
+            LastList[i] += sum % 10;
+        }
+
+        if (LastList[max] != 0) {
+            sb.append(LastList[max]);
+        }
+
+        for (int i = max-1; i >= 0; i--) {
+            sb.append(LastList[i]);
+        }
 
         System.out.println(sb);
         br.close(); 
