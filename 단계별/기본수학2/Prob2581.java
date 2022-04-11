@@ -16,38 +16,38 @@ public class Prob2581 {
 
         // OPTION 1 : 176ms 16056KB
 
-        // int min = number2;
-        // int sum = 0;
+        int min = number2;
+        int sum = 0;
 
-        // for (int i = number1; i <= number2; i++) {
+        for (int i = number1; i <= number2; i++) {
 
-        //     if (i >= 2) {
+            if (i >= 2) {
 
-        //         boolean check = true;
+                boolean check = true;
 
-        //         for (int j = 2; j < i; j++) {
+                for (int j = 2; j < i; j++) {
                     
-        //             if (i % j == 0) {
-        //                 check = false;
-        //                 break;
-        //             }
-        //         }
+                    if (i % j == 0) {
+                        check = false;
+                        break;
+                    }
+                }
 
-        //         if (check) {
-        //             sum += i;
+                if (check) {
+                    sum += i;
 
-        //             if (i < min) {
-        //                 min = i;
-        //             }
-        //         }
-        //     }
-        // }
+                    if (i < min) {
+                        min = i;
+                    }
+                }
+            }
+        }
 
-        // if (sum == 0) {
-        //     sb.append(-1);
-        // } else {
-        //     sb.append(sum + "\n" + min);
-        // }
+        if (sum == 0) {
+            sb.append(-1);
+        } else {
+            sb.append(sum + "\n" + min);
+        }
 
         // OPTION 2 : 200ms 16136KB
 
