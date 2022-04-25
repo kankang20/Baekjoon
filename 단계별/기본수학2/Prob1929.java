@@ -10,6 +10,7 @@ public class Prob1929 {
     public static void main(String[] args) throws IOException {
        
         // 에라토스테네스의 체로 구현
+
         // OPTION 1 : 376ms 27180KB
 
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
@@ -39,6 +40,26 @@ public class Prob1929 {
             if (primeList.get(i)) {
                 sb.append(i + "\n");
             }
+        }
+
+        // OPTION 3 : 328ms 24436KB
+
+        boolean[] check = new boolean[N+1];
+
+        check[0] = true;
+        check[1] = true;
+
+        for (int i = 2; i <= Math.sqrt(N+1); i++) {
+
+            if (check[i]) continue;
+
+            for (int j = i*i; j <= N; j += i) {
+                check[j] = true;
+            }
+        }
+
+        for (int i = M; i <= N; i++) {
+            if (!check[i]) sb.append(i + "\n");
         }
         
         System.out.println(sb);

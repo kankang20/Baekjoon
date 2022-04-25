@@ -75,7 +75,6 @@ public class Prob1978 {
 
             boolean check = true;
 
-            // TO 다시 개념 확인 필요
             for (int j = 2; j <= Math.sqrt(num); j++) {
                     
                 if (num % j == 0) {
