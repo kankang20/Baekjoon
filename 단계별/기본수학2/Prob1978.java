@@ -15,9 +15,9 @@ public class Prob1978 {
         int number = Integer.parseInt(br.readLine());
         StringTokenizer str = new StringTokenizer(br.readLine(), " ");
 
-        // OPTION 1 : 124ms 14338KB
-
         int count = 0;
+
+        // OPTION 1 : 124ms 14338KB
 
         for (int i = 0; i < number; i++) {
 
@@ -39,6 +39,55 @@ public class Prob1978 {
                     count++;
                 }
             }
+        }
+
+        // OPTION 2 : 124ms 14224KB
+
+        for (int i = 0; i < number; i++) {
+
+            int num = Integer.parseInt(str.nextToken());
+
+            if (num == 1) continue; // 다음 반복문으로
+
+            boolean check = true;
+
+            for (int j = 2; j < num; j++) {
+                    
+                if (num % j == 0) {
+                    check = false;
+                    break;
+                }
+            }
+
+            if (check) {
+                count++;
+            }
+            
+        }
+
+        // OPTION 3 : 120ms 14192KB
+
+        for (int i = 0; i < number; i++) {
+
+            int num = Integer.parseInt(str.nextToken());
+
+            if (num == 1) continue; 
+
+            boolean check = true;
+
+            // TO 다시 개념 확인 필요
+            for (int j = 2; j <= Math.sqrt(num); j++) {
+                    
+                if (num % j == 0) {
+                    check = false;
+                    break;
+                }
+            }
+
+            if (check) {
+                count++;
+            }
+            
         }
 
         sb.append(count);

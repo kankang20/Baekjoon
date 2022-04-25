@@ -43,6 +43,31 @@ public class Prob2581 {
             }
         }
 
+        // OPTION 3 : 152ms 15908KB
+
+        for (int i = number1; i <= number2; i++) {
+
+            boolean check = true;
+
+            if (i==1) continue;
+
+            for (int j = 2; j <= Math.sqrt(i); j++) {
+                    
+                if (i % j == 0) {
+                    check = false;
+                    break;
+                }
+            }
+
+            if (check) {
+                sum += i;
+
+                if (i < min) {
+                    min = i;
+                }
+            }
+        }
+
         if (sum == 0) {
             sb.append(-1);
         } else {
@@ -70,6 +95,27 @@ public class Prob2581 {
                 if (check) {
                     List.add(i);
                 }
+            }
+        }
+
+        // OPTION 4 : 160ms 16280KB
+
+        for (int i = number1; i <= number2; i++) {
+
+            if (i==1) continue;
+
+            boolean check = true;
+
+            for (int j = 2; j <= Math.sqrt(i); j++) {
+                    
+                if (i % j == 0) {
+                    check = false;
+                    break;
+                }
+            }
+
+            if (check) {
+                List.add(i);
             }
         }
 
