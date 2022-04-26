@@ -10,34 +10,63 @@ public class Prob4948 {
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
-        // OPTION 1 : 시간초과
-        
-        int input = 1;
-        int count;
+        // OPTION 1 : 960ms 14804KB
 
-        while (input != 0) {
+        while (true) {
 
-            input = Integer.parseInt(br.readLine());
-            count = 0;
+            int input = Integer.parseInt(br.readLine());
 
-            for (int i = input+1; i < 2*input; i++) {
+            if (input==0) break;
 
-                if (i >= 2) {
+            int count = 0;
+
+            for (int i = input+1; i <= 2*input; i++) {
     
-                    boolean check = true;
+                boolean check = true;
     
-                    for (int j = 2; j < i; j++) {
+                for (int j = 2; j <= Math.sqrt(i); j++) {
                         
-                        if (i % j == 0) {
-                            check = false;
-                            break;
-                        }
-                    }
-    
-                    if (check) {
-                        count++;
+                    if (i % j == 0) {
+                        check = false;
+                        break;
                     }
                 }
+    
+                if (check) {
+                    count++;
+                }
+            }
+
+            sb.append(count + "\n");
+        }
+
+        // OPTION 2 : 224ms 27328KB
+        // '에라토스테네스의 체' 사용
+
+        while (true) {
+
+            int input = Integer.parseInt(br.readLine());
+
+            if (input==0) break;
+
+            int count = 0;
+
+            boolean[] check = new boolean[input*2+1];
+
+            check[0] = true;
+            check[1] = true;
+
+            for (int i = 2; i <= Math.sqrt(input*2+1); i++) {
+
+                if (check[i]) continue;
+
+                for (int j = i*i; j <= input*2; j += i) {
+                    check[j] = true;
+                }
+            }
+
+            for (int i = input+1; i <= input*2; i++) {
+                if (!check[i]) count++;
             }
 
             sb.append(count + "\n");
