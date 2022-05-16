@@ -5,14 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Prob2447 {
+
+    // OPTION 1 : 336ms 47896KB
+    // https://st-lab.tistory.com/95 
+
     static char[][] star;
 
     public static void recursive (int x, int y, int N, boolean check) {
-
-        if (N == 1) {
-            star[x][y] = '*';
-            return;
-        }
 
         if (check) {
             for (int i = x; i < x + N; i++) {
@@ -20,6 +19,11 @@ public class Prob2447 {
                     star[i][j] = ' ';
                 }
             }
+            return;
+        }
+
+        if (N == 1) {
+            star[x][y] = '*';
             return;
         }
 
