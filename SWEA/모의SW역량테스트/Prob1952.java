@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// 수영장 101ms 23916KB
+// [모의 SW 역량테스트] 수영장 101ms 23916KB
 
 public class Prob1952 {
 
