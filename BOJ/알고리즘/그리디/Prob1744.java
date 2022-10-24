@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-// 수 묶기 124ms 14360KB (java11) 76ms 11492KB (java8)
+// 수 묶기 124ms 14248KB (java11) 88ms 11540KB (java8)
 // 그리디 알고리즘, 정렬, 많은 조건 분기
 
 public class Prob1744 {
@@ -40,15 +40,14 @@ public class Prob1744 {
 
             // 음수와 0 처리 ////////////////////////////////////////////////
 
-            if (minus % 2 == 0) { // 음수의 개수가 짝수이면
-                for (int i = 0; i < minus; i++) {
-                    max += numbers[i] * numbers[++i];
+            for (int i = 0; i < minus; i++) {
+
+                if (i == minus - 1) {
+                    max += numbers[i];
+                    break;
                 }
-            } else { // 음수의 개수가 홀수이면
-                for (int i = 0; i < minus - 1; i++) {
-                    max += numbers[i] * numbers[++i];
-                }
-                max += numbers[minus - 1];
+
+                max += numbers[i] * numbers[++i];
             }
 
             // 양수 처리 ///////////////////////////////////////////////////
@@ -57,7 +56,7 @@ public class Prob1744 {
 
                 if (i == minus) {
                     max += numbers[minus];
-                    continue;
+                    break;
                 }
 
                 if (numbers[i] == 1 || numbers[i - 1] == 1) {
