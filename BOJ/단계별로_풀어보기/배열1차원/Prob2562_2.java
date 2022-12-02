@@ -1,0 +1,38 @@
+package BOJ.단계별로_풀어보기.배열1차원;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+// 최댓값 156ms 16028KB
+
+public class Prob2562_2 {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+
+        int[] intArray = new int[9];
+
+        for (int i = 0; i < 9; i++) {
+            intArray[i] = Integer.parseInt(br.readLine());
+        }
+
+        int max = intArray[0], count = 1;
+
+        for (int i = 1; i < 9; i++) {
+
+            if (intArray[i] > max) {
+                max = intArray[i];
+                count = i + 1;
+            }
+
+        }
+
+        sb.append(max + "\n" + count);
+
+        System.out.println(sb);
+
+        br.close();
+    }
+}
