@@ -1,4 +1,4 @@
-package PROGRAMMERS.카카오_개발자_겨울_인턴십_2019;
+package PROGRAMMERS.KAKAO_개발자_겨울_인턴십_2019;
 
 import java.util.Stack;
 
