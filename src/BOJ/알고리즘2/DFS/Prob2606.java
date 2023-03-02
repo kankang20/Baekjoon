@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// Lv 3. 바이러스
+// Silver 3. 바이러스
 
 public class Prob2606 {
 

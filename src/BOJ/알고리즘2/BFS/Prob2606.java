@@ -6,7 +6,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-// Lv 3. 바이러스
+// Silver 3. 바이러스
 
 public class Prob2606 {
 
