@@ -28,7 +28,7 @@ public class 위장 {
             allClothes.put(clothe[1], list);
         }
 
-        // 은혜 (한 옷의 종류수 + 1(안입는경우의수)) * (한 옷의 종류수 + 1(안입는경우의수)) * ... -(아무것도 안 입는경우의수)
+        // 은혜 (한 옷의 종류수 + 1(안입는경우의수)) * ... -(아무것도 안 입는경우의수)
         for (List<String> list : allClothes.values()) {
             answer *= (list.size() + 1);
         }
