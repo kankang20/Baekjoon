@@ -21,26 +21,22 @@ public class 디스크_컨트롤러 {
         PriorityQueue<int[]> heap = new PriorityQueue<>(Comparator.comparingInt(o -> o[1]));
 
         int time = 0, answer = 0;
-        int count = 0, allCount = jobs.length;
+        int idx = 0, count = 0, allCount = jobs.length;
 
         while(count < allCount) {
 
-            for (int i = count; i < allCount; i++) {
-                if(jobs[i][0] < time) heap.add(jobs[i]);
-                else break;
+            while(idx < allCount && jobs[idx][0] <= time) {
+                heap.add(jobs[idx++]);
             }
 
             if(heap.isEmpty()) {
-                heap.add(jobs[count]);
-            }
-
-            while(!heap.isEmpty()) {
+                time = jobs[idx][0];
+            } else {
                 int[] temp = heap.poll();
                 time += temp[1];
                 answer += (time - temp[0]);
+                count++;
             }
-
-            System.out.println("###" + answer);
         }
 
         return answer/allCount;
