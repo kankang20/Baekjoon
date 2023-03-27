@@ -1,4 +1,4 @@
-package PROGRAMMERS.스택큐;
+package PROGRAMMERS.코딩테스트_고득점_Kit.스택큐;
 
 import java.util.ArrayList;
 import java.util.Arrays;
