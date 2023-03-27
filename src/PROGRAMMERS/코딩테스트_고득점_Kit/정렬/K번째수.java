@@ -1,4 +1,4 @@
-package PROGRAMMERS.정렬;
+package PROGRAMMERS.코딩테스트_고득점_Kit.정렬;
 
 import java.util.*;
 

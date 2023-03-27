@@ -1,4 +1,4 @@
-package PROGRAMMERS.완전탐색;
+package PROGRAMMERS.코딩테스트_고득점_Kit.완전탐색;
 
 public class 최소직사각형 {
     public static void main(String[] args) {

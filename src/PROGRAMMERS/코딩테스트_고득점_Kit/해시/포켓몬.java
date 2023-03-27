@@ -1,4 +1,4 @@
-package PROGRAMMERS.해시;
+package PROGRAMMERS.코딩테스트_고득점_Kit.해시;
 
 import java.util.HashMap;
 
