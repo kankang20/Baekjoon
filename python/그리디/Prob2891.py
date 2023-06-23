@@ -20,7 +20,7 @@ for t in brokenTeam:
         onemoreTeam.remove(t-1)
     elif t+1 in onemoreTeam:        # 오른쪽 팀에게 카약을 빌림
         onemoreTeam.remove(t+1)
-    else:                           # 카약을 빌리지 못했기 때문에 출발을 할 수 없는 팀
+    else:                           # 카약을 빌리지 못했기 때문에 출발을 할 수 없는 팀 + 1
         answer += 1  
 
 print(answer)
