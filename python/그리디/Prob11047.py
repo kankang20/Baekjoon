@@ -9,9 +9,6 @@ answer = 0
 
 for num in reversed(coin):
 
-    if K < num:
-        continue
-
     answer += (K // num)
 
     K %= num
