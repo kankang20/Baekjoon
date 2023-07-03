@@ -1,6 +1,6 @@
 ## ⭐️ Baekjoon 문제 풀이 ⭐️ 
 
-<hr>
+<br>
 
 참고. https://github.com/tony9402/baekjoon
 
