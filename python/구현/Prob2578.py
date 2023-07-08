@@ -3,27 +3,37 @@
 
 # def ---------------------------------------------------------------------------
 
-def doBingoCheck(row, col, check):
+def doBingoCheck(check):
 
-    count_row = 0
-    count_col = 0
+    all_count = 0
+
+    # 빙고 대각선 확인
     count_left = 0
     count_right = 0
 
-    # 빙고 확인
-    for num in range(5):
-        if check[row][num]:     # 행
-            count_row += 1
-        if check[num][col]:     # 열
-            count_col += 1
-        if row == 2 or col == 2:
-            if check[num][num]:
-                count_left += 1
-            if check[4 - num][4 - num]:
-                count_right += 1
-            
-    # 빙고 개수
-    return [count_row, count_col, count_left, count_right].count(5)
+    # 빙고 가로, 세로 확인
+    for num1 in range(5):
+        count_row = 0
+        count_col = 0
+
+        # 대각선
+        if check[num1][num1]:
+            count_left += 1
+        if check[num1][4 - num1]:
+            count_right += 1
+        
+        # 가로, 세로
+        for num2 in range(5):
+            if check[num1][num2]:
+                count_row += 1
+            if check[num2][num1]:
+                count_col += 1
+
+        all_count += [count_row, count_col].count(5)
+
+    all_count += [count_left, count_right].count(5)
+
+    return all_count
 
 # 입력 ---------------------------------------------------------------------------
 
@@ -49,24 +59,17 @@ for row in Standard:
 
         answer += 1
 
-        row = 0
-        col = 0
-        
         # 사회자가 부른 수 빙고판에 True 체크
         for num in range(5):
             if ele in Bingo[num]:
-                row = num
                 col = Bingo[num].index(ele)
-                check[row][col] = True
-
-        # 빙고가 만들어지는지 확인
-        count_bingo += doBingoCheck(row, col, check)
-        print(row, ", ", col, " = ", Bingo[row][col], " : ", doBingoCheck(row, col, check))
-
-        if count_bingo >= 3:
-            check_break = True      
+                check[num][col] = True
+        
+        # 빙고 개수 카운트
+        if doBingoCheck(check) >= 3:
+            check_break = True
             break
-    
+
     if check_break:
         break
 
