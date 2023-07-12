@@ -34,8 +34,6 @@ Board_clicked = [list(input()) for _ in range(N)]       # 지뢰판
 
 flag = False    # 지뢰 클릭 여부
 
-print(N)
-
 for r in range(N):
     for c in range(N):
 
