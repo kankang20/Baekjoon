@@ -1,7 +1,6 @@
 
 """ 실버 4. 지뢰 찾기 """
 
-
 N = 0           # 지뢰판의 크기
 Board = []      # 지뢰판
 
@@ -29,19 +28,13 @@ def doCountStart(r, c):
 
 # --------------------------------------------------------------------------------
 
-N = int(input())
-
-# Board = []
-Board_clicked = []      # 클릭한 지뢰판
-
-for num in range(N):                                # 지뢰판
-    Board.append(list(input()))
-for num in range(N):                                # 클릭한 지뢰판
-    Board_clicked.append(list(input()))
-
-# --------------------------------------------------------------------------------
+N = int(input())                                        # 지뢰판의 크기
+Board = [list(input()) for _ in range(N)]               # 지뢰판
+Board_clicked = [list(input()) for _ in range(N)]       # 지뢰판
 
 flag = False    # 지뢰 클릭 여부
+
+print(N)
 
 for r in range(N):
     for c in range(N):
@@ -51,16 +44,16 @@ for r in range(N):
             continue
 
         # 클릭한 칸
-
         if Board[r][c] == '.':                          # 지뢰가 없는 칸
             Board_clicked[r][c] = doCountStart(r,c)
-
-        elif Board[r][c] == '*' and not flag:            # 지뢰가 있는 칸
+        elif not flag and Board[r][c] == '*':            # 지뢰가 있는 칸
             flag = True
-            for n1 in range(N):
-                for n2 in range(N):
-                    if Board[n1][n2] == '*': 
-                        Board_clicked[n1][n2] = '*'
+
+if flag:
+    for n1 in range(N):
+        for n2 in range(N):
+                if Board[n1][n2] == '*': 
+                    Board_clicked[n1][n2] = '*'
 
 for row in Board_clicked:
     for col in row:
