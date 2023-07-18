@@ -1,8 +1,6 @@
 
 """ 실버 4. 빙고 """
 
-# def ---------------------------------------------------------------------------
-
 def doBingoCheck(check):
 
     all_count = 0
@@ -35,8 +33,6 @@ def doBingoCheck(check):
 
     return all_count
 
-# 입력 ---------------------------------------------------------------------------
-
 Bingo = []          # 철수의 빙고판
 Standard = []       # 사회자가 부르는 수 
 
@@ -45,8 +41,6 @@ for num in range(5):
 
 for num in range(5):
     Standard.append(list(map(int, input().split())))
-
-# 실행 ---------------------------------------------------------------------------
 
 check = [[False] * 5 for _ in range(5)]      # 사회자가 부른 수이면 True
 check_break = False                          # 이중 for문을 벗어나기 위한 변수
