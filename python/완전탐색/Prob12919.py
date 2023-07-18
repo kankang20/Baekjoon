@@ -6,17 +6,18 @@ t = input()     # 최종 문자열
 
 def doCheck(n):   
 
-    if n == t:
-        print(1)
-        exit(0)
-
-    if len(n) >= len(t):
+    if len(n) <= len(s):
+        if n == s:
+            print(1)
+            exit(0)
         return
     
-    doCheck(n + 'A')
+    if n[-1] == 'A':            # 문자열의 뒤에 A를 추가한다.
+        doCheck(n[:-1])
+    
+    if n[0] == 'B':             # 문자열의 뒤에 B를 추가하고 문자열을 뒤집는다.
+        temp = n[1:]
+        doCheck(temp[::-1])
 
-    temp = n + 'B'
-    doCheck(temp[::-1])
-
-doCheck(s)
+doCheck(t)
 print(0)
