@@ -13,3 +13,4 @@
 | 03 | 4396. 지뢰 찾기 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob4396.py)|
 | 04 | 1244. 스위치 켜고 끄기 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob1244.py)|
 | 05 | 20436. ZOAC 3 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob20436.py)|
+| 06 | 15787. 기차가 어둠을 헤치고 은하수를  | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob15787.py)|
