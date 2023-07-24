@@ -1,5 +1,5 @@
 
-""" 골드 4. 네트워크 연결 """
+""" 골드 4. 네트워크 연결 (Kruskal)"""
 
 def find(parent, x):
     if parent[x] != x:
