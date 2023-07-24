@@ -16,7 +16,7 @@ def union(parent, a, b):
         parent[a] = b
 
 N, M = map(int, input().split())        # 팀 개수, 연산 개수
-parent = [num for num in range(N+1)]    # 부모 테이블 초기호
+parent = [num for num in range(N+1)]    # 부모 테이블 초기화
 
 for i in range(M):
     check, a, b = map(int, input().split()) 
