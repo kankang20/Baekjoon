@@ -9,3 +9,5 @@
 | **번호** | **문제** | **난이도** | **풀이 여부** |
 |:--------:|:--------|:----------:|:-----------:|
 | 01 | 1976. 여행 가자 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%B6%84%EB%A6%AC%EC%A7%91%ED%95%A9/Prob1976.py)|
+| 02 | 1717. 집합의 표현 | 골드 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%B6%84%EB%A6%AC%EC%A7%91%ED%95%A9/Prob1717.py)|
+| 03 | 16562. 친구비 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%B6%84%EB%A6%AC%EC%A7%91%ED%95%A9/Prob16562.py)|
