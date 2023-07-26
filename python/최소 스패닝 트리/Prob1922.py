@@ -1,6 +1,8 @@
 
 """ 골드 4. 네트워크 연결 (Kruskal) """
 
+import sys
+
 def find(parent, x):
     if parent[x] != x:
         parent[x] = find(parent, parent[x])
@@ -14,23 +16,28 @@ def union(parent, a, b):
     else:
         parent[a] = b
 
-N = int(input())    # 컴퓨터의 수
-M = int(input())    # 연결할 수 있는 선의 수
-parent = [num for num in range(N+1)]
+def solution():
 
-edges = []
+    N = int(sys.stdin.readline())    # 컴퓨터의 수
+    M = int(sys.stdin.readline())    # 연결할 수 있는 선의 수
+    parent = [num for num in range(N+1)]
 
-for _ in range(M):
-    a, b, cost = map(int, input().split())
-    edges.append((cost, a, b))
+    edges = []
 
-edges.sort()
-answer = 0      # 최소 비용
+    for _ in range(M):
+        a, b, cost = map(int, sys.stdin.readline().split())
+        edges.append((cost, a, b))
 
-for edge in edges:
-    cost, a, b = edge
-    if find(parent, a) != find(parent, b):
-        union(parent, a, b)
-        answer += cost
+    edges.sort()
+    answer = 0      # 최소 비용
 
-print(answer)
+    for edge in edges:
+        cost, a, b = edge
+        if find(parent, a) != find(parent, b):
+            union(parent, a, b)
+            answer += cost
+
+    print(answer)
+
+if __name__ == "__main__":
+    solution()
