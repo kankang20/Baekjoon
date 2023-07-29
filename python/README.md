@@ -8,6 +8,6 @@
 |:-------------:|:-------------------:|:-------------:|
 | 탐욕법(그리디) | 9 | [Greedy](https://github.com/yuuforest/Baekjoon/tree/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94) |
 | 구현 | 6 | [Implementation](https://github.com/yuuforest/Baekjoon/tree/main/python/%EA%B5%AC%ED%98%84) |
-| 완전탐색 | 2 | [Brute Force](https://github.com/yuuforest/Baekjoon/tree/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89) |
+| 완전탐색 | 4 | [Brute Force](https://github.com/yuuforest/Baekjoon/tree/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89) |
 | 분리집합 | 3 | [Disjoint Set](https://github.com/yuuforest/Baekjoon/tree/main/python/%EB%B6%84%EB%A6%AC%EC%A7%91%ED%95%A9) |
 | 최소 스패닝 트리 | 2 | [MST](https://github.com/yuuforest/Baekjoon/tree/main/python/%EC%B5%9C%EC%86%8C%20%EC%8A%A4%ED%8C%A8%EB%8B%9D%20%ED%8A%B8%EB%A6%AC) |
