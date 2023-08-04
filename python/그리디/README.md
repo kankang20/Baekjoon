@@ -17,4 +17,3 @@
 | 07 | 11508. 2+1 세일 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob11508.py) |
 | 08 | 11047. 동전 0 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob11047.py) |
 | 09 | 13305. 주유소 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob13305.py) |
-| 10 | 21758. 꿀 따기 | 골드 5 | 💭 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob21758.py) |
