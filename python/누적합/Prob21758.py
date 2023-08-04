@@ -13,10 +13,9 @@ def solution():
         S[i] += S[i-1]
 
     answer = 0
+    count = 0
 
     for idx in range(N):
-        
-        count = 0
 
         if idx == 0:
             for i in range(1, N-1):
