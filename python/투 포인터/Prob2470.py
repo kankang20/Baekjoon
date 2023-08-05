@@ -4,28 +4,29 @@
 import sys
 
 N = int(sys.stdin.readline())                       # 전체 용액의 수
-P = list(map(int, sys.stdin.readline().split()))    # 각 용액의 특성값
+S = list(map(int, sys.stdin.readline().split()))    # 각 용액의 특성값
 
-answer = sys.maxsize
-number = ()
+M = []
+P = []
 
-for idx in range(N-1):
+for i in S:
+    M.append(i) if i < 0 else P.append(i)
 
-    num1 = P[idx]
-
-    i = idx + 1
-
-    while i < N:
-        num2 = P[i]
-        sum = abs(num1 + num2)
-
-        if sum < answer:
-            answer = sum
-            number = (num1, num2)
-
-        i += 1
-
-if number[0] < number[1]:
-    print(number[0], number[1])
+if not M:
+    P.sort()
+    print(P[0], P[1])
+elif not P:
+    M.sort()
+    print(M[-2], M[-1])
 else:
-    print(number[1], number[0])
+    answer = sys.maxsize
+    number = ()
+
+    for m in M:
+        for p in P:
+            count = abs(m + p)
+            if count < answer:
+                answer = count
+                number = (m, p)
+        
+    print(number[0], number[1])
