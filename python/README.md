@@ -12,4 +12,4 @@
 | 분리집합 | 3 | [Disjoint Set](https://github.com/yuuforest/Baekjoon/tree/main/python/%EB%B6%84%EB%A6%AC%EC%A7%91%ED%95%A9) |
 | 최소 스패닝 트리 | 2 | [MST](https://github.com/yuuforest/Baekjoon/tree/main/python/%EC%B5%9C%EC%86%8C%20%EC%8A%A4%ED%8C%A8%EB%8B%9D%20%ED%8A%B8%EB%A6%AC) |
 | 누적합 | 1 | [Prefix Sum](https://github.com/yuuforest/Baekjoon/tree/main/python/%EB%88%84%EC%A0%81%ED%95%A9) |
-| 투 포인터 | 0 | [Two Pointer](https://github.com/yuuforest/Baekjoon/tree/main/python/%ED%88%AC%20%ED%8F%AC%EC%9D%B8%ED%84%B0) |
+| 투 포인터 | 1 | [Two Pointer](https://github.com/yuuforest/Baekjoon/tree/main/python/%ED%88%AC%20%ED%8F%AC%EC%9D%B8%ED%84%B0) |
