@@ -1,3 +1,7 @@
-## ⭐️ DFS/BFS ⭐️ 
+ ## ⭐️ DFS/BFS ⭐️ 
 
-
+| **번호** | **문제** | **풀이 여부** |
+|:--------:|:--------|:-------------:|
+| 01 | 예제 5-1) 스택 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/%EC%9D%B4%EC%BD%94%ED%85%8C/chapter05/%EC%8A%A4%ED%83%9D.py) |
+| 01 | 예제 5-2) 큐 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/%EC%9D%B4%EC%BD%94%ED%85%8C/chapter05/%ED%81%90.py) |
+| 01 | 예제 5-3) 팩토리얼 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/%EC%9D%B4%EC%BD%94%ED%85%8C/chapter05/%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC.py) |
