@@ -11,6 +11,7 @@ while N >= K:
     answer += (N - temp)
 
     N = temp // K
+    
     answer += 1
 
 print(answer + N - 1)
