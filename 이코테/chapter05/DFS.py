@@ -14,8 +14,6 @@ def dfs(graph, n, visited):
         if not visited[i]:
             dfs(graph, i, visited)
 
-    return 0
-
 
 
 # 노드 1부터 시작하기 떄문에 0은 제외
