@@ -36,7 +36,6 @@ while True:
         answer += 1
         turn = 0
         continue
-
     # 2-2. 가보지 않은 칸의 개수 += 1
     else:
         turn += 1
@@ -46,11 +45,9 @@ while True:
         nr = r - dr[dir]
         nc = c - dc[dir]
         turn = 0
-
         # 3-2. 바라보는 방향을 유지한 채로 한 칸 뒤로 이동
         if map[nr][nc] == 0:
             r, c = nr, nc
-        
         # 3-3. 뒤쪽 방향이 바다인 칸이면 게임 stop
         else:
             break
