@@ -23,7 +23,6 @@ def bfs(nowr, nowc):
     dir = [(0, -1), (0, 1), (1, 0), (-1, 0)]
 
     queue = deque()
-
     queue.append((nowr, nowc))
 
     while queue:
