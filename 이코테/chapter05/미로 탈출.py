@@ -45,10 +45,10 @@ def bfs(nowr, nowc):
 
 bfs(0, 0)
 
-for r in range(R):
-    for c in range(C):
-        print(graph[r][c], end = " ")
-    print()
+# for r in range(R):
+#     for c in range(C):
+#         print(graph[r][c], end = " ")
+#     print()
 
 print(graph[R-1][C-1])
 
