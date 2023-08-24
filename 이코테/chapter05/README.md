@@ -7,3 +7,4 @@
 | 03 | 예제 5-3) 팩토리얼 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/%EC%9D%B4%EC%BD%94%ED%85%8C/chapter05/%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC.py) |
 | 04 | 예제 5-4) DFS | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/%EC%9D%B4%EC%BD%94%ED%85%8C/chapter05/DFS.py) |
 | 05 | 예제 5-5) BFS | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/%EC%9D%B4%EC%BD%94%ED%85%8C/chapter05/BFS.py) |
+| 06 | 예제 5-6) 음료수 얼려 먹기 | ✔️ [DFS](https://github.com/yuuforest/Baekjoon/blob/main/%EC%9D%B4%EC%BD%94%ED%85%8C/chapter05/%EC%9D%8C%EB%A3%8C%EC%88%98%20%EC%96%BC%EB%A0%A4%20%EB%A8%B9%EA%B8%B0%20(DFS).py) ✔️ [BFS](https://github.com/yuuforest/Baekjoon/blob/main/%EC%9D%B4%EC%BD%94%ED%85%8C/chapter05/%EC%9D%8C%EB%A3%8C%EC%88%98%20%EC%96%BC%EB%A0%A4%20%EB%A8%B9%EA%B8%B0%20(BFS).py) |
