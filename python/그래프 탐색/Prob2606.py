@@ -7,11 +7,12 @@ from collections import deque
 N = int(input())    # 컴퓨터 수
 M = int(input())    # 네트워크 상에서 직접 연결되어 있는 컴퓨터 쌍의 수
 
-computer = [[0] * (N+1) for _ in range(N+1)]
+computer = [[] for _ in range(N+1)] 
 
 for _ in range(M):
     i, j = map(int, input().split())
-    computer[i][j] = computer[j][i] = 1
+    computer[i].append(j)
+    computer[j].append(i)
 
 
 # 함수
@@ -28,9 +29,8 @@ def bfs(start):
 
         now = queue.popleft()
 
-        for i in range(N+1):
-
-            if not visited[i] and computer[now][i]:
+        for i in computer[now]:
+            if not visited[i]:
                 queue.append(i)
                 visited[i] = 1
 
