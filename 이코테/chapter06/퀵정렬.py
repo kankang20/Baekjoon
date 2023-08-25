@@ -8,7 +8,7 @@ def quick_sort_detail(N, start, end):
     if end <= start:
         return
     
-    # 기준 설정
+    # 기준인 pivot 설정
     pivot = start
 
     left = start + 1
@@ -42,7 +42,7 @@ def quick_sort_simple(N):
     if len(N) <= 1:
         return N
     
-    # 기준 설정
+    # 기준인 pivot 설정
     pivot = N[0]
     # 기준인 pivot을 제외한 리스트
     tail = N[1:]
