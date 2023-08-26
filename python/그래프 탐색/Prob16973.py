@@ -1,3 +1,68 @@
 
 """ 골드 4. 직사각형 탈출 """
 
+from collections import deque
+
+### 입력
+# 격자판의 크기 (행, 열)
+N, M = map(int, input().split())
+# 격자판의 각 칸의 정보 - 0은 빈칸, 1은 벽
+maps = [list(map(int, input().split())) for _ in range(N)]
+# 직사각형의 크기 H, W, 시작 좌표 Sr, Sc, 도착 좌표 Fr, Fc
+H, W, Sr, Sc, Fr, Fc = map(int, input().split())
+
+# 4방
+dr = [0, 0, -1, 1]
+dc = [-1, 1, 0, 0]
+
+
+### 함수
+def move(r, c):
+
+    queue = deque()
+
+    queue.append((r, c))
+    maps[Sr][Sc] = 2
+
+    while queue:
+
+        nowr, nowc = queue.popleft()
+
+        if nowr == Fr and nowc == Fc:
+            break
+
+        for d in range(4):
+
+            nr = nowr + dr[d]
+            nc = nowc + dc[d]
+
+            # 직사각형은 격자판 안에 있어야 함
+            if nr < 0 or nc < 0 or (nr + H - 1) >= N or (nc + W - 1) >= M:
+                continue
+
+            # 직사각형이 놓여 있는 칸에는 벽이 없음
+            if not check(nr, nc):
+                continue
+            
+            if not maps[nr][nc]:
+                maps[nr][nc] = maps[nowr][nowc] + 1
+                queue.append((nr, nc))
+
+    return maps[Fr][Fc] - 2
+
+
+def check(startr, startc):
+    for i in range(startr, startr + H):
+        for j in range(startc, startc + W):
+            if maps[i][j] == 1:
+                return False
+    return True
+
+
+### 실행
+Sr -= 1
+Sc -= 1
+Fr -= 1
+Fc -= 1
+
+print(move(Sr, Sc))
