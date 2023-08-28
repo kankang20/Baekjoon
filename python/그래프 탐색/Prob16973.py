@@ -15,6 +15,14 @@ H, W, Sr, Sc, Fr, Fc = map(int, input().split())
 dr = [0, 0, -1, 1]
 dc = [-1, 1, 0, 0]
 
+# 벽 위치 저장
+walls = []
+
+for i in range(N):
+    for j in range(M):
+        if maps[i][j] == 1:
+            walls.append((i, j))
+
 
 ### 함수
 def move(r, c):
@@ -29,7 +37,7 @@ def move(r, c):
         nowr, nowc = queue.popleft()
 
         if nowr == Fr and nowc == Fc:
-            break
+            return maps[Fr][Fc] - 2
 
         for d in range(4):
 
@@ -48,14 +56,16 @@ def move(r, c):
                 maps[nr][nc] = maps[nowr][nowc] + 1
                 queue.append((nr, nc))
 
-    return maps[Fr][Fc] - 2
+    return -1
 
 
 def check(startr, startc):
-    for i in range(startr, startr + H):
-        for j in range(startc, startc + W):
-            if maps[i][j] == 1:
-                return False
+    minr, maxr = startr, startr + H
+    minc, maxc = startc, startc + W
+
+    for (r, c) in walls:
+        if minr <= r < maxr and minc <= c < maxc:
+            return False
     return True
 
 
