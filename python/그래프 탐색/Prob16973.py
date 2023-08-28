@@ -2,8 +2,11 @@
 """ 골드 4. 직사각형 탈출 """
 
 from collections import deque
+import sys
 
 ### 입력
+input = sys.stdin.readline
+
 # 격자판의 크기 (행, 열)
 N, M = map(int, input().split())
 # 격자판의 각 칸의 정보 - 0은 빈칸, 1은 벽
@@ -25,6 +28,7 @@ for i in range(N):
 
 
 ### 함수
+
 def move(r, c):
 
     queue = deque()
@@ -44,32 +48,26 @@ def move(r, c):
             nr = nowr + dr[d]
             nc = nowc + dc[d]
 
-            # 직사각형은 격자판 안에 있어야 함
-            if nr < 0 or nc < 0 or (nr + H - 1) >= N or (nc + W - 1) >= M:
+            # 직사각형은 격자판 안에 있어야 함 / 직사각형이 놓여 있는 칸에는 벽이 없음
+            if nr < 0 or nc < 0 or nr > (N - H) or nc > (M - W) or maps[nr][nc] or not check(nr, nc):
                 continue
 
-            # 직사각형이 놓여 있는 칸에는 벽이 없음
-            if not check(nr, nc):
-                continue
-            
-            if not maps[nr][nc]:
-                maps[nr][nc] = maps[nowr][nowc] + 1
-                queue.append((nr, nc))
+            queue.append((nr, nc))
+            maps[nr][nc] = maps[nowr][nowc] + 1
 
     return -1
 
 
 def check(startr, startc):
-    minr, maxr = startr, startr + H
-    minc, maxc = startc, startc + W
-
-    for (r, c) in walls:
-        if minr <= r < maxr and minc <= c < maxc:
-            return False
+    for r in range(startr, startr + H):
+        for c in range(startc, startc + W):
+            if maps[r][c] == 1:
+                return False
     return True
 
 
 ### 실행
+
 Sr -= 1
 Sc -= 1
 Fr -= 1
