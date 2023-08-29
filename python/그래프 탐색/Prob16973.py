@@ -65,6 +65,7 @@ def check(startr, startc):
     for (r, c) in walls:
         if minr <= r < maxr and minc <= c < maxc:
             return False
+        
     return True
 
 
