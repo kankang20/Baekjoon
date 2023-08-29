@@ -59,18 +59,17 @@ def move(r, c):
 
 
 def check(startr, startc):
-    for r in range(startr, startr + H):
-        for c in range(startc, startc + W):
-            if maps[r][c] == 1:
-                return False
+    minr, maxr = startr, startr + H
+    minc, maxc = startc, startc + W
+
+    for (r, c) in walls:
+        if minr <= r < maxr and minc <= c < maxc:
+            return False
     return True
 
 
 ### 실행
 
-Sr -= 1
-Sc -= 1
-Fr -= 1
-Fc -= 1
+Sr, Sc, Fr, Fc = Sr-1, Sc-1, Fr-1, Fc-1
 
 print(move(Sr, Sc))
