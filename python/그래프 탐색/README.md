@@ -9,6 +9,6 @@
 | **번호** | **문제** | **난이도** | **풀이 여부** |
 |:--------:|:--------|:----------:|:-----------:|
 | 01 | 2606. 바이러스 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob2606.py)|
-| 02 | 16973. 직사각형 탈출 | 골드 4 | 💭 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob16973.py)|
-| 03 | 1260. DFS와 BFS | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob1260.py)|
+| 02 | 1260. DFS와 BFS | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob1260.py)|
+| 03 | 16973. 직사각형 탈출 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob16973.py)|
 
