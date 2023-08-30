@@ -56,7 +56,7 @@ def quick_sort_simple(N):
 
 
 
-N = [9, 5, 8, 3, 1, 13]
+N = [5, 9, 8, 3, 1, 13]
 
 N_detail = N[:]
 N_simple = N[:]
