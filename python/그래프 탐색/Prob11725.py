@@ -6,7 +6,6 @@ import sys
 
 ### 입력
 input = sys.stdin.readline
-
 N = int(input())                        # 노드의 개수
 nodes = [[] for _ in range(N+1)]        # 인접 리스트    
 for _ in range(N-1):
