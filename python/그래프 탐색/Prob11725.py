@@ -1,8 +1,8 @@
 
 """ 실버 2. 트리의 부모 찾기 """
 
+from collections import deque
 import sys
-sys.setrecursionlimit(10**6)
 
 ### 입력
 input = sys.stdin.readline
@@ -13,20 +13,28 @@ for _ in range(N-1):
     nodes[i].append(j)
     nodes[j].append(i)
 
-# 각 노드의 부모 테이블
-parent = [-1] * (N+1)
-parent[1] = 1
-
 
 ### 함수
-def solution(start):
-    for n in nodes[start]:
-        if parent[n] == -1:
-            parent[n] = start
-            solution(n)
 
+def solution():
+    parent = [-1] * (N+1)
+
+    queue = deque()
+
+    queue.append(1)
+    parent[1] = 1
+
+    while queue:
+        now = queue.popleft()
+
+        for nn in nodes[now]:
+            if parent[nn] == -1:
+                parent[nn] = now
+                queue.append(nn)
+
+    return parent[2:]
 
 ### 실행
-solution(1)
-for p in parent[2:]:
+parent = solution()
+for p in parent:
     print(p)
