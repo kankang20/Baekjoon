@@ -18,11 +18,15 @@ for idx in range(L):
 
 ### 함수
 
-def solution():
+def solution(C):
+
+    start = -ML + 1
+    end = 0
+
     return "YES"
     
 
 
 ### 실행
 
-print(solution())
+print(solution(C))
