@@ -19,14 +19,15 @@ def solution():
     answers = []
 
     for idx in range(1, N+1):
-        answers.append((idx, bfs(idx)))
+        answers.append((bfs(idx), idx))
 
-    answer = answers[0][1]
+    answers.sort(key=lambda x : (-x[0], x[1]))
+    max_ans = answers[0][0]
 
-    for a in sorted(answers, key=lambda x : (-x[1], x[0])):
-        if answer == a[1]:
-            print(a[0], end = " ")
-        else: 
+    for ans in answers:
+        if max_ans == ans[0]:
+            print(ans[1], end=" ")
+        else:
             break
 
 
