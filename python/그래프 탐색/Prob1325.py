@@ -17,18 +17,19 @@ for _ in range(M):
 ### 함수
 def solution():
     answers = []
+    max_ans = -1
 
     for idx in range(1, N+1):
-        answers.append((bfs(idx), idx))
+        ans = bfs(idx)
+        if max_ans < ans:
+            max_ans = ans
+            answers.clear()
+            answers.append(idx)
+        elif max_ans == ans:
+            answers.append(idx)
 
-    answers.sort(key=lambda x : (-x[0], x[1]))
-    max_ans = answers[0][0]
-
-    for ans in answers:
-        if max_ans == ans[0]:
-            print(ans[1], end=" ")
-        else:
-            break
+    for a in answers:
+        print(a, end = " ")
 
 
 def bfs(start):
