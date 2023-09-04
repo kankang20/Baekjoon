@@ -1,2 +1,47 @@
 
 """ 실버 1. 단지번호붙이기 """
+
+import sys
+
+### 입력
+input = sys.stdin.readline
+N = int(input())    # 지도의 크기
+graph = [list(map(int, input().rstrip())) for _ in range(N)]
+
+visited = [[False] * N for _ in range(N)]    # 방문 처리
+count = 0
+
+dr = [0, 0, -1, 1]
+dc = [1, -1, 0, 0]
+
+### 함수
+def dfs(r, c):
+    visited[r][c] = True
+    global count
+    count += 1
+
+    for d in range(4):
+        nr = r + dr[d]
+        nc = c + dc[d]
+
+        if nr < 0 or nc < 0 or nr >= N or nc >= N or visited[nr][nc] or not graph[nr][nc]:
+            continue
+
+        dfs(nr, nc)
+
+
+### 실행
+answers = []
+ans = 0
+
+for i in range(N):
+    for j in range(N):
+        if graph[i][j] and not visited[i][j]:
+            dfs(i, j)
+            answers.append(count)
+            ans += 1
+            count = 0
+
+print(ans)
+for a in sorted(answers):
+    print(a)
