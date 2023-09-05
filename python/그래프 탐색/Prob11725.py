@@ -4,7 +4,7 @@
 from collections import deque
 import sys
 
-### 입력
+
 input = sys.stdin.readline
 N = int(input())                        # 노드의 개수
 nodes = [[] for _ in range(N+1)]        # 인접 리스트    
@@ -13,8 +13,6 @@ for _ in range(N-1):
     nodes[i].append(j)
     nodes[j].append(i)
 
-
-### 함수
 
 def solution():
     parent = [-1] * (N+1)
@@ -34,7 +32,7 @@ def solution():
 
     return parent[2:]
 
-### 실행
+
 parent = solution()
 for p in parent:
     print(p)
