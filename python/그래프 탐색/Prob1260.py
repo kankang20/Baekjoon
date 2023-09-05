@@ -3,7 +3,6 @@
 
 from collections import deque
 
-### 입력
 
 # 정점의 개수, 간선의 개수, 탐색을 시작할 정점의 번호
 N, M, V = map(int, input().split())
@@ -18,7 +17,6 @@ for _ in range(M):
 for m in maps:
     m.sort()
 
-### 함수
 
 def dfs(n):
 
@@ -48,7 +46,6 @@ def bfs(n):
                 queue.append(i)
                 visitedBFS[i] = True
 
-### 실행
 
 visitedDFS = [False] * (N+1)
 dfs(V)
