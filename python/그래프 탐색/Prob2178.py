@@ -4,7 +4,6 @@
 from collections import deque
 import sys
 
-### 입력
 input = sys.stdin.readline
 
 N, M = map(int, input().split())    
@@ -13,7 +12,7 @@ graphs = [list(map(int, input().rstrip())) for _ in range(N)]
 dr = [0, 0, 1, -1]
 dc = [1, -1, 0, 0]
 
-### 함수
+
 def bfs():
 
     visited = [[False] * M for _ in range(N)]
@@ -40,5 +39,4 @@ def bfs():
             visited[nr][nc] = True
 
 
-### 실행
 print(bfs())
