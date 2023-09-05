@@ -4,7 +4,7 @@
 from collections import deque
 import sys
 
-### 입력
+
 input = sys.stdin.readline
 N = int(input())    # 지도의 크기
 graph = [list(map(int, input().rstrip())) for _ in range(N)]
@@ -13,7 +13,7 @@ visited = [[False] * N for _ in range(N)]    # 방문 처리
 dr = [0, 0, -1, 1]
 dc = [1, -1, 0, 0]
 
-### 함수
+
 def bfs(r, c):
 
     q = deque()
@@ -41,7 +41,6 @@ def bfs(r, c):
     return count
 
 
-### 실행
 answers = []
 ans = 0
 
