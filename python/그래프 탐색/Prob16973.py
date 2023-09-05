@@ -4,15 +4,12 @@
 from collections import deque
 import sys
 
-### 입력
+
 input = sys.stdin.readline
 
-# 격자판의 크기 (행, 열)
-N, M = map(int, input().split())
-# 격자판의 각 칸의 정보 - 0은 빈칸, 1은 벽
-maps = [list(map(int, input().split())) for _ in range(N)]
-# 직사각형의 크기 H, W, 시작 좌표 Sr, Sc, 도착 좌표 Fr, Fc
-H, W, Sr, Sc, Fr, Fc = map(int, input().split())
+N, M = map(int, input().split())                                # 격자판의 크기 (행, 열)             
+maps = [list(map(int, input().split())) for _ in range(N)]      # 격자판의 각 칸의 정보 - 0은 빈칸, 1은 벽  
+H, W, Sr, Sc, Fr, Fc = map(int, input().split())                # 직사각형의 크기 H, W, 시작 좌표 Sr, Sc, 도착 좌표 Fr, Fc
 
 # 4방
 dr = [0, 0, -1, 1]
@@ -26,8 +23,6 @@ for i in range(N):
         if maps[i][j] == 1:
             walls.append((i, j))
 
-
-### 함수
 
 def move(r, c):
 
@@ -68,8 +63,6 @@ def check(startr, startc):
         
     return True
 
-
-### 실행
 
 Sr, Sc, Fr, Fc = Sr-1, Sc-1, Fr-1, Fc-1
 
