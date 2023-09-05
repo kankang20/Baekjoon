@@ -3,7 +3,6 @@
 
 from collections import deque
 
-# 입력
 N = int(input())    # 컴퓨터 수
 M = int(input())    # 네트워크 상에서 직접 연결되어 있는 컴퓨터 쌍의 수
 
@@ -15,7 +14,6 @@ for _ in range(M):
     computer[j].append(i)
 
 
-# 함수
 def bfs(start):
 
     visited = [0] * (N+1)
@@ -37,5 +35,4 @@ def bfs(start):
     return visited.count(1) - 1
 
 
-# 실행
 print(bfs(1))
