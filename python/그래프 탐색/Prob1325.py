@@ -4,7 +4,6 @@
 from collections import deque
 import sys
 
-### 입력
 input = sys.stdin.readline
 
 N, M = map(int, input().split())        # 컴퓨터의 개수 N, 신뢰 관계 개수 M
@@ -14,7 +13,6 @@ for _ in range(M):
     computers[b].append(a)
 
 
-### 함수
 def solution():
     answers = []
     max_ans = -1
@@ -53,5 +51,4 @@ def bfs(start):
     return count
 
 
-### 실행
 solution()
