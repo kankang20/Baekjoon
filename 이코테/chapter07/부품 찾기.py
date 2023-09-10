@@ -1,6 +1,15 @@
 
 """ 예제 7-3) 부품 찾기 """
 
+"""
+5
+8 3 7 9 2
+3
+5 7 9
+
+>> no yes yes
+"""
+
 N = int(input())
 products = list(map(int, input().split()))
 
