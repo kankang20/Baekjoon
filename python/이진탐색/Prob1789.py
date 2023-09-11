@@ -3,10 +3,8 @@
 
 import sys
 
-
 input = sys.stdin.readline
 S = int(input())
-
 
 def solution(start, end):
     answer = 0
@@ -21,6 +19,5 @@ def solution(start, end):
             end = mid - 1
 
     return answer
-
 
 print(solution(0, S))
