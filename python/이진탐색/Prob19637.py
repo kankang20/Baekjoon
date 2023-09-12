@@ -11,22 +11,16 @@ for _ in range(N):
     awards.append((name, int(grade)))
 
 
-def solution(start, end, target):
-    answer = 0
-
-    while start <= end:
-
-        mid = (start + end) // 2
-
-        if awards[mid][1] >= target:
-            answer = mid
-            end = mid - 1
-        else:
-            start = mid + 1
-
-    return awards[answer][0]
+def solution(target):
+    
+    if target <= awards[0][1]:
+        return awards[0][0]
+    else:
+        for idx in range(1, N):
+            if awards[idx-1][1] < target <= awards[idx][1]:
+                return awards[idx][0]
 
 
 for _ in range(M):
     grade = int(input())
-    print(solution(0, N-1, grade))
+    print(solution(grade))
