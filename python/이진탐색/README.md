@@ -14,5 +14,5 @@
 | 04 | 19637. IF문 좀 대신 써줘 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob19637.py) |
 | 05 | 2512. 예산 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob2512.py) |
 | 06 | 11663. 선분 위의 점 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob11663.py) |
-<!-- | 07 | 2805. 나무 자르기 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob2805.py) | -->
+| 07 | 2805. 나무 자르기 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob2805.py) |
 
