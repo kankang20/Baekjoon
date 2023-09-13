@@ -14,12 +14,11 @@ def solution(start, end):
     while start <= end:
         mid = (start + end) // 2
 
-        total = 0
-        for t in trees:
-            if t > mid:
-                total += (t - mid)
+        total = sum([t - mid for t in trees if t > mid])
 
-        if total < M:
+        if total == M:
+            return mid
+        elif total < M:
             end = mid - 1
         else:
             answer = mid
