@@ -16,5 +16,5 @@
 | 06 | 11663. 선분 위의 점 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob11663.py) |
 | 07 | 2805. 나무 자르기 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob2805.py) |
 | 08 | 1654. 랜선 자르기 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob1654.py) |
-<!-- | 09 | 22871. 징검다리 건너기 (large) | 실버 1 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob22871.py) | -->
+| 09 | 22871. 징검다리 건너기 (large) | 실버 1 | 💭 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob22871.py) |
 
