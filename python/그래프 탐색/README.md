@@ -17,4 +17,5 @@
 | 07 | 2667. 단지번호붙이기 | 실버 1 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob2667.py)|
 | 08 | 16918. 봄버맨 | 실버 1 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob16918.py) |
 | 09 | 14940. 쉬운 최단거리 | 실버 1 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob14940.py) |
+| 10 | 3584. 가장 가까운 공통 조상 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob3584.py) |
 
