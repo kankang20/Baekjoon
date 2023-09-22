@@ -16,10 +16,9 @@ def solution(start, end):
     answer = 0
 
     while start <= end:
-        total = 0
-
         mid = (start + end) // 2
 
+        total = 0
         for c in cakes:
             if c > mid:
                 total += (c - mid)
