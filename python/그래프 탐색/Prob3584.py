@@ -19,10 +19,10 @@ def solution():
 
     node1, node2 = map(int, input().split())
 
-    while not visited[node1]:
-        visited[node1] = True
-        if trees[node1] == -1: break
+    visited[node1] = True
+    while trees[node1] != -1:
         node1 = trees[node1]
+        visited[node1] = True
     
     while not visited[node2]:
         visited[node2] = True
