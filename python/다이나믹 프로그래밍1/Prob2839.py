@@ -3,19 +3,17 @@
 
 N = int(input())        # 배달해야 하는 설탕 무게
 
-def solution():
+def solution(N):
+    answer = 0
 
-    table = [0, 0, 0, 1, 0, 1]   # 0, 1, 2, 3, 4, 5
+    while N >= 3:
+        if N % 5 == 0:
+            answer += (N//5)
+            N %= 5
+        else:
+            answer += 1
+            N -= 3
 
-    for idx in range(6, N+1):
+    return -1 if N else answer
 
-        table.append(table[idx-3] + 1 if table[idx-3] else 0)           # 3
-        temp = table[idx-5] + 1 if table[idx-5] else 0                  # 5
-
-        if temp:
-            if table[idx]: table[idx] = min(temp, table[idx])
-            else: table[idx] = temp
-
-    return table[N] if table[N] else -1
-
-print(solution())
+print(solution(N))
