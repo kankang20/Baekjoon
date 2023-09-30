@@ -27,7 +27,7 @@ INF = int(1e9)
 N, M = map(int, input().split())    # 노드의 개수 N, 간선의 개수 M
 start = int(input())                # 시작 노드
 
-graph = [[] for i in range(N+1)]    # 각 노드에 연결되어 있는 노드에 대한 정보 저장
+graph = [[] for _ in range(N+1)]    # 각 노드에 연결되어 있는 노드에 대한 정보 저장
 visited = [False] * (N+1)           # 방문 여부
 table = [INF] * (N+1)               # 최단 거리 테이블
 
