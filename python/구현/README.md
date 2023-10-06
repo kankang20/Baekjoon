@@ -16,4 +16,5 @@
 | 06 | 15787. 기차가 어둠을 헤치고 은하수를  | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob15787.py)|
 | 07 | 1913. 달팽이 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob1913.py) |
 | 08 | 12933. 오리 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob12933.py) |
+| 09 | 28286. 재채점을 기다리는 중 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob28286.py) |
 
