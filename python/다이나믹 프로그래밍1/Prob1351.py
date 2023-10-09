@@ -2,23 +2,37 @@
 """ 골드 5. 무한 수열 """
 
 import sys
-import math
-
-N, P, Q = map(int, sys.stdin.readline().split())
+from collections import deque
 
 def solution():
     
-    max_value = max(N//P, N//Q)
-
-    table = [0] * (max_value+1)
-    table[0] = 1
+    N, P, Q = map(int, sys.stdin.readline().split())
 
     if N == 0:
-        return table[0]
+        return 1
 
-    for idx in range(1, max_value+1):
+    table = {}
+    table[0] = 1
+    table[N] = 0
+
+    q = deque()
+    q.append(N)
+
+    while q:
+        now = q.popleft()
+        i, j = now//P, now//Q
+
+        if i not in table:
+            q.append(i)
+            table[i] = 0
+
+        if j not in table:
+            q.append(j)
+            table[j] = 0
+
+    for idx in sorted(table.keys())[1:]:
         table[idx] = table[idx//P] + table[idx//Q]
 
-    return table[N//P] + table[N//Q]
+    return table[N]
 
 print(solution())
