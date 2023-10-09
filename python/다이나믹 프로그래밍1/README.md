@@ -11,4 +11,5 @@
 | 01 | 2748. 피보나치 수 2 | 브론즈 1 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D1/Prob2748.py) |
 | 02 | 1010. 다리 놓기 | 실버 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D1/Prob1010.py) |
 | 03 | 2839. 설탕 배달 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D1/Prob2839.py) |
+| 04 | 1351. 무한 수열 | 골드 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D1/Prob1351.py) |
 
