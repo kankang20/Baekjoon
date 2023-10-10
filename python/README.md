@@ -15,3 +15,5 @@
 | 투 포인터 | 1 | [Two Pointer](https://github.com/yuuforest/Baekjoon/tree/main/python/%ED%88%AC%20%ED%8F%AC%EC%9D%B8%ED%84%B0) |
 | 그래프 탐색 | 9 | [Graph Traversal](https://github.com/yuuforest/Baekjoon/tree/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89) |
 | 이진 탐색 | 0 | [Binary Search](https://github.com/yuuforest/Baekjoon/tree/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89) |
+| 다이나믹 프로그래밍1 | 4 | [Dynamic Programming 1](https://github.com/yuuforest/Baekjoon/tree/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D1) |
+| 자료구조 | 7 | [Data Structure](https://github.com/yuuforest/Baekjoon/tree/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0) |
