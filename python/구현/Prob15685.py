@@ -4,3 +4,5 @@
 import sys
 
 input = sys.stdin.readline
+
+N = int(input())        # 드래곤 커브의 개수
