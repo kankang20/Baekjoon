@@ -17,5 +17,5 @@
 | 07 | 1913. 달팽이 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob1913.py) |
 | 08 | 12933. 오리 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob12933.py) |
 | 09 | 28286. 재채점을 기다리는 중 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob28286.py) |
-| 10 | 15685. 드래곤 커브 | 골드 3 | 💭 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob15685.py) |
+| 10 | 15685. 드래곤 커브 | 골드 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob15685.py) |
 
