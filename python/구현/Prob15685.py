@@ -34,7 +34,7 @@ def solution():
                 q.append((endx + endy - starty, endy - endx + startx))
         
         # 3. 최종 드래곤 코드에 추가
-        answer += q
+        answer += set(q)
 
     answer = set(answer)
 
