@@ -18,4 +18,4 @@
 | 08 | 1654. 랜선 자르기 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob1654.py) |
 | 09 | 22871. 징검다리 건너기 (large) | 실버 1 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob22871.py) |
 | 10 | 1561. 놀이 공원 | 골드 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob1561.py) |
-
+| 11 | 1092. 배 | 골드 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob1092.py) |
