@@ -31,7 +31,7 @@ def search(graph, V, start):
 
     q = deque()
 
-    q.append(start)
+    q.append((start, 0))
     visited[start] = True
     distance[start] = 0
     
@@ -39,8 +39,12 @@ def search(graph, V, start):
 
         node, dis = q.popleft()
 
+        for (n, d) in graph[node]:
+            if not visited[n]:
+                visited[n] = True
+                distance[n] = dis + d
+                q.append((n, distance[n]))
         
-
     return max(distance)
 
 
