@@ -21,4 +21,5 @@
 | 11 | 11724. 연결 요소의 개수 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/tree/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89) |
 | 12 | 18352. 특정 거리의 도시 찾기 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob18352.py) |
 | 13 | 1167. 트리의 지름 | 골드 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob1167.py) |
+| 14 | 4179. 불! | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob4179.py) |
 
