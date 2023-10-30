@@ -13,3 +13,4 @@
 | 03 | 10974. 모든 순열 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/Prob10974.py)|
 | 04 | 25328. 문자열 집합 조합하기 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/Prob25328.py)|
 | 05 | 18511. 큰 수 구성하기 | 실버 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/Prob18511.py) |
+| 06 | 2422. 한윤정이 이탈리아에 가서 아이스크림을 사먹는데 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/Prob2422.py) |
