@@ -8,11 +8,15 @@ def solution():
 
     input = sys.stdin.readline
 
-    N = int(input())    # 카드 개수 
-    K = int(input())    # 선택할 카드 개수
+    N = int(input())                                    # 카드 개수 
+    K = int(input())                                    # 선택할 카드 개수
+    cards = [input().rstrip() for _ in range(N)]        # 카드
 
-    cards = [int(input()) for _ in range(N)]
+    answer = set()
 
+    for temp in list(permutations(cards, K)):
+        answer.add(int("".join(temp)))
 
+    return len(answer)
 
 print(solution())
