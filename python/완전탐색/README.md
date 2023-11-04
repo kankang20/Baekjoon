@@ -17,3 +17,4 @@
 | 07 | 5568. 카드 놓기 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/Prob5568.py) |
 | 08 | 16439. 치킨치킨치킨 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/Prob16439.py) |
 | 09 | 2503. 숫자 야구 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/Prob2503.py) |
+| 10 | 14501. 퇴사 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/Prob14501.py) |
