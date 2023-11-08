@@ -32,6 +32,7 @@ def search(R, C, graph, r, c):
     dir = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
     q = deque()
+    
     q.append((r, c))
     graph[r][c] = 0
 
