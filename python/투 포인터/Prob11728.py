@@ -23,10 +23,7 @@ def solution():
             answer.append(str(B[bstart]))
             bstart += 1
 
-    if astart < N:
-        answer.extend(map(str, A[astart:]))
-    else:
-        answer.extend(map(str, B[bstart:]))
+    answer.extend(map(str, A[astart:] + B[bstart:]))
 
     return " ".join(answer)
 
