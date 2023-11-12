@@ -10,7 +10,8 @@ def solution():
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
 
-    print(A, B)
+    answer = map(str, sorted(A+B))
 
+    return " ".join(answer)
 
 print(solution())
