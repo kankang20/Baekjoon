@@ -10,3 +10,4 @@
 |:--------:|:--------|:----------:|:-----------:|
 | 01 | 2470. 두 용액 | 골드 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%ED%88%AC%20%ED%8F%AC%EC%9D%B8%ED%84%B0/Prob2470.py) |
 | 02 | 2230. 수 고르기 | 골드 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%ED%88%AC%20%ED%8F%AC%EC%9D%B8%ED%84%B0/Prob2230.py) |
+| 03 | 11728. 배열 합치기 | 실버 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%ED%88%AC%20%ED%8F%AC%EC%9D%B8%ED%84%B0/Prob11728.py) |
