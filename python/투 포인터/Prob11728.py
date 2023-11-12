@@ -10,7 +10,23 @@ def solution():
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
 
-    answer = map(str, sorted(A+B))
+    astart, bstart = 0, 0
+
+    answer = []
+
+    while astart < N and bstart < M:
+
+        if A[astart] <= B[bstart]:
+            answer.append(str(A[astart]))
+            astart += 1
+        else:
+            answer.append(str(B[bstart]))
+            bstart += 1
+
+    if astart < N:
+        answer.extend(map(str, A[astart:]))
+    else:
+        answer.extend(map(str, B[bstart:]))
 
     return " ".join(answer)
 
