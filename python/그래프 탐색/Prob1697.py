@@ -20,6 +20,27 @@ def search(N, K):
     q.append((N, 0))
     visited[N] = 0
 
+    while q:
+
+        now, count = q.popleft()
+
+        if now == K:
+            return visited[now]
+        
+        count += 1
+
+        if 0 < now - 1 and count < visited[now-1]:
+            q.append((now-1, count))
+            visited[now-1] = count
+
+        if now + 1 < 100001 and count < visited[now+1]:
+            q.append((now+1, count))
+            visited[now+1] = count
+
+        if now*2 < 100001 and count < visited[now*2]:
+            q.append((now*2, count))
+            visited[now*2] = count
+
     return visited[K]
 
 print(solution())
