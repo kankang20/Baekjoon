@@ -26,3 +26,4 @@
 | 16 | 7576. 토마토 | 골드 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob7576.py) |
 | 17 | 17836. 공주님을 구해라! | 골드 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob17836.py) |
 | 18 | 1012. 유기농 배추 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob1012.py) |
+| 19 | 1697. 숨바꼭질 | 실버 1 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob1697.py) |
