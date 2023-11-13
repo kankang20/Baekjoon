@@ -25,21 +25,14 @@ def search(N, K):
         now, count = q.popleft()
 
         if now == K:
-            return visited[now]
+            return count
         
         count += 1
 
-        if 0 < now - 1 and count < visited[now-1]:
-            q.append((now-1, count))
-            visited[now-1] = count
-
-        if now + 1 < 100001 and count < visited[now+1]:
-            q.append((now+1, count))
-            visited[now+1] = count
-
-        if now*2 < 100001 and count < visited[now*2]:
-            q.append((now*2, count))
-            visited[now*2] = count
+        for now in (now-1, now+1, now*2):
+            if 0 < now < 100001 and count < visited[now]:
+                q.append((now, count))
+                visited[now] = count
 
     return visited[K]
 
