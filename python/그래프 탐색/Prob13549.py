@@ -13,37 +13,39 @@ def solution():
 
 def search(N, K):
 
-    visited = [abs(N-K)] * (100001)
+    visited = [False] * (100001)
+    count = 0
 
     q= deque()
 
-    q.append(N)
-    visited[N] = 0
+    q.append((N, count))
+    visited[N] = True
 
     while q:
 
-        now = q.popleft()
+        now, count = q.popleft()
+
+        # print(now, count)
 
         if now == K:
-            return visited[now]
-        
-        count = visited[now]
+            return count
         
         next = now * 2
-        if next < 100001 and count < visited[next]:
-            q.append(next)
-            visited[next] = count
+        if next < 100001 and not visited[next]:
+            q.append((next, count))
+            visited[next] = True
 
         next = now - 1
-        if 0 < next and count < visited[next]:
-            q.append(next)
-            visited[next] = count + 1
+        if 0 <= next and not visited[next]:
+            q.append((next, count + 1))
+            visited[next] = True
 
         next = now + 1
-        if next < 100001 and count < visited[next]:
-            q.append(next)
-            visited[next] = count + 1
+        if next <= 100000 and not visited[next]:
+            q.append((next, count + 1))
+            visited[next] = True
 
-    return visited[K]
+        
+    return count
 
 print(solution())
