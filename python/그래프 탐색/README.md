@@ -29,3 +29,4 @@
 | 19 | 1697. 숨바꼭질 | 실버 1 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob1697.py) |
 | 20 | 13549. 숨바꼭질 3 | 골드 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob13549.py) |
 | 21 | 12851. 숨바꼭질 2 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob12851.py) |
+| 22 | 3109. 빵집 | 골드 2 | 💭 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/Prob3109.py) |
