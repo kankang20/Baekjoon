@@ -8,11 +8,7 @@ def solution():
     input = sys.stdin.readline
     N, K = map(int, input().split())
     numbers = list(map(int, input().split()))
-
-    if N == 1:
-        return 1 if numbers[0] % 2 == 0 else 0
     
-    answer = 0
     start, end, = 0, 0
     length_even, count_odd = 0, 0
 
@@ -20,6 +16,8 @@ def solution():
         length_even += 1
     else:
         count_odd += 1
+
+    answer = length_even
 
     while end < N-1:
 
@@ -31,16 +29,17 @@ def solution():
             count_odd += 1
 
         if K < count_odd:
+
             while numbers[start] % 2 == 0:
+                length_even -= 1
                 start += 1
-            start += 1
+
             count_odd -= 1
+            start += 1
 
         answer = max(answer, length_even)
 
     return answer
-
-
 
 
 print(solution())
