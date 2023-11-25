@@ -11,4 +11,30 @@ def solution():
     for _ in range(N):
         words.append(input())
 
+    answer = 0
+
+    for word in words:
+        answer += group_word(word)
+    
+    return answer
+
+def group_word(word):
+
+    check = []
+    idx = 0
+
+    while idx < len(word):
+
+        temp = word[idx]
+
+        if temp in check:
+            return 0
+        
+        check.append(temp)
+        
+        while idx < len(word) and temp == word[idx]:
+            idx += 1
+    
+    return 1
+
 print(solution())
