@@ -9,6 +9,13 @@ def solution():
     N = int(input())                # 단어 개수
     words = []
     for _ in range(N):
-        words.append(input())
+        word = input().rstrip()
+        if word not in words:
+            words.append(word)
+
+    words.sort(key=lambda x:(len(x), x))
+
+    for word in words:
+        print(word)
 
 solution()
