@@ -13,7 +13,8 @@ def solution():
         if word not in words:
             words.append(word)
 
-    words.sort(key=lambda x:(len(x), x))
+    words.sort()
+    words.sort(key=lambda x:len(x))
 
     for word in words:
         print(word)
