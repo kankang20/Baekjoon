@@ -9,8 +9,16 @@ def solution():
 
     while True:
         try:
+            
             S, T = input().split()
-            print("Yes" if S in T else "No")
+            
+            sidx = 0
+            for t in T:
+                if sidx < len(S) and S[sidx] == t:
+                    sidx += 1
+            
+            print("Yes" if sidx == len(S) else "No")
+
         except:
             break
         
