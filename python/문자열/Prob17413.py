@@ -10,5 +10,28 @@ def solution():
 
     answer = ""
 
+    temp = []
+    flag = False
+    
+    for s in S:
+        
+        if flag:
+            if s == ">":
+                flag = False
+            answer += s
+            continue
+
+        if s == "<":
+            answer += "".join(reversed(temp))
+            temp.clear()
+            flag = True
+            answer += "<"
+        elif s == " ":
+            answer += "".join(reversed(temp)) + " "
+            temp.clear()
+        else:
+            temp.append(s)
+
+    return answer + "".join(reversed(temp))
 
 print(solution())
