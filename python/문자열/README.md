@@ -14,3 +14,5 @@
 | 04 | 6550. 부분 문자열 | 실버 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob6550.py) |
 | 05 | 1764. 듣보잡 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob1764.py) |
 | 06 | 9342. 염색체 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob9342.py) |
+| 07 | 20291. 파일 정리 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob20291.py) |
+| 08 | 17413. 단어 뒤집기 2 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob17413.py) |
