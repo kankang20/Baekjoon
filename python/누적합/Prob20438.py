@@ -10,7 +10,8 @@ def solution():
     k_student = list(map(int, input().split()))     # 졸고 있는 학생의 입장 번호
     q_student = list(map(int, input().split()))     # 출석 코드를 받을 학생의 입장 번호
 
-    student = [0] * (N+3)
+    N += 3
+    student = [0] * N
 
     for k in k_student:
         student[k] = -1
@@ -18,19 +19,19 @@ def solution():
     for q in q_student:
         if student[q] == 0:
             idx = q
-            while idx < N+3:
+            while idx < N:
                 if student[idx] == 0:
                     student[idx] = 1
                 idx += q
 
+    answer = [0] * N
+    answer[3] = 0 if student[3] == 1 else 1
+
+    for idx in range(4, N):
+        answer[idx] = answer[idx-1] + (0 if student[idx] == 1 else 1)
+
     for _ in range(M):
         S, E = map(int, input().split())                # 구간의 범위 S, E
-        
-        answer = 0
-        for idx in range(S, E+1):
-            if student[idx] < 1:
-                answer += 1
-
-        print(answer)
+        print(answer[E] - answer[S-1])
 
 solution()
