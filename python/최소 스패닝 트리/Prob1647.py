@@ -3,6 +3,20 @@
 
 import sys
 
+def find(parent, x):
+    if parent[x] != x:
+        parent[x] = find(parent, parent[x])
+    return parent[x]
+
+def union(parent, a, b):
+    a = find(parent, a)
+    b = find(parent, b)
+
+    if a < b:
+        parent[b] = a
+    else:
+        parent[a] = b
+
 def solution():
 
     input = sys.stdin.readline
@@ -16,6 +30,17 @@ def solution():
         a, b, c = map(int, input().split())
         edges.append((c, a, b))
 
+    edges.sort()
     
+    answer = 0
+    max_answer = 0
+
+    for c, a, b in edges:
+        if find(parent, a) != find(parent, b):
+            union(parent, a, b)
+            answer += c
+            max_answer = max(c, max_answer)
+    
+    return answer - max_answer
 
 print(solution())
