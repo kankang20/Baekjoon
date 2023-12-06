@@ -11,3 +11,4 @@
 | 01 | 1922. 네트워크 연결 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%B5%9C%EC%86%8C%20%EC%8A%A4%ED%8C%A8%EB%8B%9D%20%ED%8A%B8%EB%A6%AC/Prob1922.py)|
 | 02 | 1197. 최소 스패닝 트리 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%B5%9C%EC%86%8C%20%EC%8A%A4%ED%8C%A8%EB%8B%9D%20%ED%8A%B8%EB%A6%AC/Prob1197.py)|
 | 03 | 1647. 도시 분할 계획 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/tree/main/python/%EC%B5%9C%EC%86%8C%20%EC%8A%A4%ED%8C%A8%EB%8B%9D%20%ED%8A%B8%EB%A6%AC) |
+| 04 | 16398. 행성 연결 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%B5%9C%EC%86%8C%20%EC%8A%A4%ED%8C%A8%EB%8B%9D%20%ED%8A%B8%EB%A6%AC/Prob16398.py) |
