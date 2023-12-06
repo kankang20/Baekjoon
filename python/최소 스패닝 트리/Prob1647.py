@@ -33,14 +33,18 @@ def solution():
     edges.sort()
     
     answer = 0
-    max_answer = 0
+    count = 0
 
     for c, a, b in edges:
+
+        if count == N-2:
+            break
+
         if find(parent, a) != find(parent, b):
             union(parent, a, b)
             answer += c
-            max_answer = max(c, max_answer)
+            count += 1
     
-    return answer - max_answer
+    return answer
 
 print(solution())
