@@ -2,47 +2,48 @@
 """ 골드 4. 행성 연결 """
 
 import sys
+from collections import defaultdict
+from heapq import heappush, heappop
 
-def find(parent, a):
-    if parent[a] != a:
-        parent[a] = find(parent, parent[a])
-    return parent[a]
+def prim(N, edges, start):
 
-def union(parent, a, b):
-    a = find(parent, a)
-    b = find(parent, b)
-    
-    if a < b:
-        parent[b] = a
-    else:
-        parent[a] = b
+    heap = []
+    connected = [False] * (N)
+    selected = defaultdict(list)
+
+    for i, j, count in edges:
+        selected[i].append((count, i, j))
+        selected[j].append((count, j, i))
+
+    connected[start] = True
+    for count, i, j in selected[start]:
+        heappush(heap, (count, i, j))
+
+    answer = 0
+
+    while heap:
+        count, i, j = heappop(heap)
+        if not connected[j]:
+            connected[j] = True
+            answer += count
+
+            for edge in selected[j]:
+                if not connected[edge[2]]:
+                    heappush(heap, edge)
+
+    return answer
 
 def solution():
 
     input = sys.stdin.readline
-    N = int(input())                # 행성의 수
-    parent = [i for i in range(N)]
+    N = int(input())
 
     edges = []
     for i in range(N):
         for (j, cost) in enumerate(list(map(int, input().split()))):
             if cost > 0:
-                edges.append((cost, i, j))
+                edges.append((i, j, cost))
 
-    edges.sort()
-
-    answer = 0
-    count = 0
-
-    for cost, i, j in edges:
-        if find(parent, i) != find(parent, j):
-            union(parent, i, j)
-            answer += cost
-            count += 1
-
-        if count == N-1:
-            break
-
-    return answer
+    return prim(N, edges, 0)
 
 print(solution())
