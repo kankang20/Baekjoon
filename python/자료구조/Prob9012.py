@@ -10,6 +10,21 @@ def solution():
 
     for _ in range(testcase):
         
-        word = input()
+        word = list(input().rstrip())
+        print(check(word))
+
+def check(word:list):
+
+    answer = 0
+
+    while word:
+
+        temp = word.pop()
+        answer += (1 if temp == ")" else -1)
+        
+        if answer < 0:
+            return "NO"
+        
+    return "NO" if answer else "YES"
 
 solution()
