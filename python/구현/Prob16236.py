@@ -2,6 +2,7 @@
 """ 골드 3. 아기 상어 """
 
 import sys
+from collections import deque
 
 def solution():
     
@@ -10,66 +11,76 @@ def solution():
     N = int(input())                # 공간의 크기
 
     shark = [0] * 3                 # 아기 상어의 위치
-    fish = []                       # 물고기
+    sea = []
 
-    array = []
     for i in range(N):
-        array.append(list(map(int, input().split())))
+        sea.append(list(map(int, input().split())))
         for j in range(N):
-            if array[i][j] == 9:
+            if sea[i][j] == 9:
                 shark[0], shark[1], shark[2] = i, j, 2
-                array[i][j] = 0
-            elif array[i][j] > 0:
-                fish.append((i, j, array[i][j]))
+                sea[i][j] = 0
     
-    return move(N, array, shark, fish)
+    return move(N, sea, shark)
 
 
-def move(N, array, shark:list, fish:list):
+def move(N, sea:list, shark:list):
 
     time_count = 0
+    fish_count = 0
 
-    fish.sort(key=lambda x:(x[0], x[1]))
+    while True:
 
-    while fish:
+        fish = seek_fish(N, sea, shark)
 
-        fish_index, fish_distnace = seek_fish(N, array, shark, fish)
-
-        if fish_index == -1:
+        if fish == -1:
             return time_count
         
-        # 상어
-        shark[0], shark[1] = fish[fish_index][0], fish[fish_index][1]
-        shark[2] += array[fish[fish_index][0]][fish[fish_index][1]]
-
-        # 물고기
-        array[fish[fish_index][0]][fish[fish_index][1]] = 0
-        fish.pop(fish_index)
-
-        # 시간 추가
-        time_count += fish_distnace
+        # 시간
+        time_count += fish[2]
         
-    return time_count
+        # 물고기
+        fish_count += 1
+        sea[fish[0]][fish[1]] = 0
+
+        # 상어
+        shark[0], shark[1] = fish[0], fish[1]
+
+        if fish_count == shark[2]:
+            shark[2] += 1
+            fish_count = 0
 
 
-def seek_fish(N, array, shark:list, fish:list):
+def seek_fish(N, sea:list, shark:list):
 
-    min_distance = N + N
-    answer_index = -1
+    dr = [-1, 0, 0, 1]      # 상좌우하
+    dc = [0, -1, 1, 0]
 
-    for f in range(0, len(fish)):
+    visited = [[False] * N for _ in range(N)]
+    possible_fish = []
 
-        if not array[fish[f][0]][fish[f][1]] or array[fish[f][0]][fish[f][1]] >= shark[2]:
-            continue 
+    q = deque()
 
-        x = abs(shark[0] - fish[f][0])
-        y = abs(shark[1] - fish[f][1])
+    q.append((shark[0], shark[1], 0))
+    visited[shark[0]][shark[1]] = True
 
-        if x + y < min_distance:
-            min_distance = x + y
-            answer_index = f
+    while q:
 
-    return (answer_index, min_distance)
+        r, c, dis = q.popleft()
 
+        for d in range(4):
+
+            nr = r + dr[d]
+            nc = c + dc[d]
+
+            if nr < 0 or nc < 0 or nr >= N or nc >= N or visited[nr][nc] or shark[2] < sea[nr][nc]:
+                continue
+
+            if 0 < sea[nr][nc] < shark[2]:
+                possible_fish.append((nr, nc, dis+1))
+            
+            q.append((nr, nc, dis+1))
+            visited[nr][nc] = True
+    
+    return sorted(possible_fish, key=lambda x : (x[2], x[0], x[1]))[0] if possible_fish else -1
 
 print(solution())
