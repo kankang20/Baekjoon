@@ -19,6 +19,6 @@
 | 09 | 28286. 재채점을 기다리는 중 | 실버 2 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob28286.py) |
 | 10 | 15685. 드래곤 커브 | 골드 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob15685.py) |
 | 11 | 1713. 후보 추천하기 | 실버 1 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob1713.py) |
-| 12 | 16236. 아기 상어 | 골드 3 | 💭 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob16236.py) |
+| 12 | 16236. 아기 상어 | 골드 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob16236.py) |
 | 13 | 19236. 청소년 상어 | 골드 2 | 💭 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob19236.py) |
 
