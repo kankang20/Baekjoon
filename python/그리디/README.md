@@ -20,3 +20,4 @@
 | 10 | 19644. 좀비 떼가 기관총 진지에도 오다니 | 골드 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob19644.py) |
 | 11 | 1092. 배 | 골드 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob1092.py) |
 | 12 | 20115. 에너지 드링크 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob20115.py) |
+| 13 | 1781. 컵라면 | 골드 2 | 💭 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob1781.py) |
