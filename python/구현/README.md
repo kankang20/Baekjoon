@@ -8,7 +8,7 @@
 
 | **번호** | **문제** | **난이도** | **풀이 여부** |
 |:--------:|:--------|:----------:|:-----------:|
-| 01 | &nbsp;[20546. 기적의 매매법](https://www.acmicpc.net/problem/20546)&nbsp;&nbsp; | &nbsp;&nbsp; 💎 실버 5 &nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob20546.py)&nbsp; |
+| 01 | &nbsp;[20546. 기적의 매매법](https://www.acmicpc.net/problem/20546)&nbsp;&nbsp; | &nbsp;&nbsp; <img src="https://github.com/yuuforest/Baekjoon/assets/97596022/3830e84d-bfd8-45c5-9b6c-ff8d2a1cf125" width="20" height="20"/>&nbsp;실버 5&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob20546.py)&nbsp; |
 | 02 | &nbsp;[2578. 빙고](https://www.acmicpc.net/problem/2578)&nbsp;&nbsp; | &nbsp;&nbsp; 💎 실버 4 &nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob2578.py)&nbsp;|
 | 03 | &nbsp;[4396. 지뢰 찾기](https://www.acmicpc.net/problem/4396)&nbsp;&nbsp; | &nbsp;&nbsp; 💎 실버 4 &nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob4396.py)&nbsp;|
 | 04 | &nbsp;[1244. 스위치 켜고 끄기](https://www.acmicpc.net/problem/1244)&nbsp;&nbsp; | &nbsp;&nbsp; 💎 실버 4 &nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B5%AC%ED%98%84/Prob1244.py&nbsp;)|
