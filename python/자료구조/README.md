@@ -17,4 +17,5 @@
 | 09 | 18258. 큐 2 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Prob18258.py) |
 | 10 | 2164. 카드2 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Prob2164.py) |
 | 11 | 10886. 덱 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Prob10886.py) |
+| 12 | 1935. 후위 표기식2 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Prob1935.py) |
 
