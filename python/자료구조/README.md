@@ -1,8 +1,8 @@
 ## ⭐️ 자료구조 문제 풀이 ⭐️ 
 
-<br>
+참고. https://github.com/tony9402/baekjoon/tree/main/data_structure
 
-<!-- 💭 [진행 중]  ✔️ [완료] -->
+<br>
 
 | **번호** | **문제** | **난이도** | **풀이 여부** |
 |:--------:|:--------|:----------:|:-----------:|
@@ -19,4 +19,5 @@
 | 11 | &nbsp;[10866. 덱](https://www.acmicpc.net/problem/10866)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/3c7e9f4b-e603-404f-b612-258d66475421" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Prob10866.py)&nbsp; |
 | 12 | &nbsp;[1935. 후위 표기식2](https://www.acmicpc.net/problem/1935)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/07accbcc-b7bc-4a50-a82e-37f90db6a48f" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Prob1935.py)&nbsp; |
 | 13 | &nbsp;[1966. 프린터 큐](https://www.acmicpc.net/problem/1966)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/07accbcc-b7bc-4a50-a82e-37f90db6a48f" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Prob1966.py)&nbsp; |
+| 14 | &nbsp;[2346. 풍선 터뜨리기](https://www.acmicpc.net/problem/2346)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/07accbcc-b7bc-4a50-a82e-37f90db6a48f" width="20"/>&nbsp;&nbsp; | &nbsp;💬 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Prob2346.py)&nbsp; |
 
