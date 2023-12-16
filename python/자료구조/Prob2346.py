@@ -8,19 +8,23 @@ def solution():
 
     input = sys.stdin.readline
     N = int(input())                                                                                # 풍선 개수
-    ballons = deque((idx, num) for (idx, num) in enumerate(list(map(int, input().split()))))        # 각 풍선 안의 종이에 적혀있는 수
+    balloons = deque((idx+1, num) for (idx, num) in enumerate(list(map(int, input().split()))))        # 각 풍선 안의 종이에 적혀있는 수
 
-    while ballons:
+    while balloons:
 
-        (idx, number) = ballons.popleft()
-        print(idx+1, end = " ")
+        (idx, number) = balloons.popleft()
+        print(idx, end = " ")
 
-        if ballons:
+        if balloons:
 
-            number += (-1 if number > 0 else len(ballons))
+            if number > 0:
+                number -= 1
+            else:
+                while number < 0:
+                    number += len(balloons)
             
-            while number:
-                ballons.append(ballons.popleft())
+            while number > 0:
+                balloons.append(balloons.popleft())
                 number -= 1
 
 solution()
