@@ -23,30 +23,27 @@ def solution():
     answer = 0
     deadline = 1
 
+    count = 0
+
     print(problem)
 
     while problem:
 
-        (day, cup) = heappop(problem)
-        deadline = day
-        
-        # 같은 날짜의 과제 중 max(컵라면) 구하기
-        temp = []
-        
-        while problem:
-            tday, tcup = heappop(problem)
-            if tday == day:
-                temp.append(tcup)
-            else:
-                heappush(problem, (tday, tcup))
-                break
-        
-        answer += max(temp) if temp else 0
-        if temp:
-            print(temp)
-            answer += max(temp)
+        print(problem[0], answer)
+        next_deadline = problem[0][1]
 
-        deadline += 1
+        if deadline < next_deadline:
+            count += 1
+            continue
+        elif deadline == next_deadline:
+            # 같으면 같은 컵라면 개수 전체 가져오기
+            temp = []
+            while deadline == problem[0][1]:
+                temp.append(problem.pop())
+            if len(temp) <= (count+1):
+                answer = sum(temp)
+            else:
+                answer = sum(sorted(temp)[:count])
         
     
     return answer
