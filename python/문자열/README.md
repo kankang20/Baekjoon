@@ -4,15 +4,13 @@
 
 <br>
 
-<!-- 💭 [진행 중]  ✔️ [완료] -->
-
 | **번호** | **문제** | **난이도** | **풀이 여부** |
 |:--------:|:--------|:----------:|:-----------:|
-| 01 | 1316. 그룹 단어 체커 | 실버 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob1316.py) |
-| 02 | 1181. 단어 정렬 | 실버 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob1181.py) |
-| 03 | 4659. 비밀번호 발음하기 | 실버 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob4659.py) |
-| 04 | 6550. 부분 문자열 | 실버 5 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob6550.py) |
-| 05 | 1764. 듣보잡 | 실버 4 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob1764.py) |
-| 06 | 9342. 염색체 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob9342.py) |
-| 07 | 20291. 파일 정리 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob20291.py) |
-| 08 | 17413. 단어 뒤집기 2 | 실버 3 | ✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob17413.py) |
+| 문제번호 | &nbsp;[1316. 그룹 단어 체커](https://www.acmicpc.net/problem/1316)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/16c246cd-0ac7-4c70-8e59-ae53094efefd" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob1316.py)&nbsp; |
+| 02 | &nbsp;[1181. 단어 정렬](https://www.acmicpc.net/problem/1181)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/16c246cd-0ac7-4c70-8e59-ae53094efefd" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob1181.py)&nbsp; |
+| 03 | &nbsp;[4659. 비밀번호 발음하기](https://www.acmicpc.net/problem/4659)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/16c246cd-0ac7-4c70-8e59-ae53094efefd" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob4659.py)&nbsp; |
+| 04 | &nbsp;[6550. 부분 문자열](https://www.acmicpc.net/problem/6550)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/16c246cd-0ac7-4c70-8e59-ae53094efefd" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob6550.py)&nbsp; |
+| 05 | &nbsp;[1764. 듣보잡](https://www.acmicpc.net/problem/1764)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/3c7e9f4b-e603-404f-b612-258d66475421" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob1764.py)&nbsp; |
+| 06 | &nbsp;[9342. 염색체](https://www.acmicpc.net/problem/9342)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/07accbcc-b7bc-4a50-a82e-37f90db6a48f" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob9342.py)&nbsp; |
+| 07 | &nbsp;[20291. 파일 정리](https://www.acmicpc.net/problem/20291)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/07accbcc-b7bc-4a50-a82e-37f90db6a48f" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob20291.py)&nbsp; |
+| 08 | &nbsp;[17413. 단어 뒤집기 2](https://www.acmicpc.net/problem/17413)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/07accbcc-b7bc-4a50-a82e-37f90db6a48f" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%AC%B8%EC%9E%90%EC%97%B4/Prob17413.py)&nbsp; |
