@@ -2,7 +2,7 @@
 """ 골드 2. 컵라면 """
 
 import sys
-from heapq import heappush, heappop, heapify
+from heapq import heappush, heappop
 
 # 2 6 3 1 7 5 4
 # 1 2 3 1 6 2 3
@@ -14,38 +14,42 @@ def solution():
     input = sys.stdin.readline
 
     N = int(input())            # 숙제의 개수
+
+    maximum_day = 0
     
-    problem = []
+    problem_list = []
     for _ in range(N):
         day, cup = map(int, input().split())
-        heappush(problem, (day, cup))
+        problem_list.append((day, cup))
+        maximum_day = max(day, maximum_day)
 
-    answer = 0
-    deadline = 1
+    # maximum_day = max(problem_list, key=lambda x:x[0])[0]
+    # print("maximum_day = ", maximum_day)
 
-    count = 0
-
-    print(problem)
-
-    while problem:
-
-        print(problem[0], answer)
-        next_deadline = problem[0][1]
-
-        if deadline < next_deadline:
-            count += 1
-            continue
-        elif deadline == next_deadline:
-            # 같으면 같은 컵라면 개수 전체 가져오기
-            temp = []
-            while deadline == problem[0][1]:
-                temp.append(problem.pop())
-            if len(temp) <= (count+1):
-                answer = sum(temp)
-            else:
-                answer = sum(sorted(temp)[:count])
+    problem_heapq = []
+    for (day, cup) in problem_list:
+        heappush(problem_heapq, (-cup, day))      
         
-    
+    selected = [False] * (maximum_day+1)
+    answer = 0
+
+    for _ in range(N):
+
+        temp = heappop(problem_heapq)
+        (cup, day) = -temp[0], temp[1]
+        print("(cup, day) = (", cup, day, ")")
+
+        while selected[day] and day > 0:
+            day -= 1
+        
+        if day == 0:
+            continue
+
+        selected[day] = True
+        answer += cup
+
+        
+
     return answer
 
 
