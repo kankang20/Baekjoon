@@ -16,13 +16,10 @@ def solution():
             if idx == 0:
                 heappush(answer, num)
                 continue
-            
-            temp = heappop(answer)
-            
-            if temp < num:
+
+            if answer[0] < num:
+                heappop(answer)
                 heappush(answer, num)
-            else:
-                heappush(answer, temp)
     
     return heappop(answer)
 
