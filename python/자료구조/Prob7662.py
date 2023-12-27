@@ -17,7 +17,7 @@ def solution():
         min_heap = []       # 최소힙 (작은 수 먼저)
         max_heap = []       # 최대힙 (큰 수 먼저)
 
-        numbers = set()
+        numbers = dict()
 
         for _ in range(Operations):
 
@@ -29,33 +29,33 @@ def solution():
 
                 heappush(min_heap, number)
                 heappush(max_heap, -number)
-
-                numbers.add(number)
+            
+                numbers[number] = numbers.get(number, 0) + 1
 
             elif command[0] == "D":
 
-                if not numbers:
+                if sum(numbers.values()) == 0:
                     continue
 
                 if command[1] == "1":       # 최댓값 삭제
-                    while -max_heap[0] not in numbers:
+                    while not numbers[-max_heap[0]]:
                         heappop(max_heap)
-                    numbers.remove(-heappop(max_heap))
+                    numbers[-heappop(max_heap)] -= 1
 
                 elif command[1] == "-1":    # 최솟값 삭제
-                    while min_heap[0] not in numbers:
+                    while not numbers[min_heap[0]]:
                         heappop(min_heap)
-                    numbers.remove(heappop(min_heap))
+                    numbers[heappop(min_heap)] -= 1
         
-        if not numbers:
+        if sum(numbers.values()) == 0:
             print("EMPTY")
         else:
 
-            while -max_heap[0] not in numbers:
+            while not numbers[-max_heap[0]]:
                 heappop(max_heap)
             max_number = -heappop(max_heap)
 
-            while min_heap[0] not in numbers:
+            while not numbers[min_heap[0]]:
                 heappop(min_heap)
             min_number = heappop(min_heap)
 
