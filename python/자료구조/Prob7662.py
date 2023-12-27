@@ -40,12 +40,25 @@ def solution():
                 if command[1] == "1":       # 최댓값 삭제
                     while -max_heap[0] not in numbers:
                         heappop(max_heap)
-                    heappop(max_heap)
+                    numbers.remove(-heappop(max_heap))
 
                 elif command[1] == "-1":    # 최솟값 삭제
                     while min_heap[0] not in numbers:
                         heappop(min_heap)
-                    heappop(min_heap)
-            
+                    numbers.remove(heappop(min_heap))
+        
+        if not numbers:
+            print("EMPTY")
+        else:
+
+            while -max_heap[0] not in numbers:
+                heappop(max_heap)
+            max_number = -heappop(max_heap)
+
+            while min_heap[0] not in numbers:
+                heappop(min_heap)
+            min_number = heappop(min_heap)
+
+            print(max_number, min_number)
 
 solution()
