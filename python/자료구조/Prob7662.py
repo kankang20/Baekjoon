@@ -27,26 +27,16 @@ def solution():
             
             elif command[0] == "D":
 
-                if command[1] == "-1":          # 최솟값 삭제
-                    # while min_heap and selected[min_heap[0][1]]:
-                    #     heappop(min_heap)
-                    if min_heap:
-                        selected[heappop(min_heap)[1]] = True
+                if command[1] == "-1" and min_heap:          # 최솟값 삭제
+                    selected[heappop(min_heap)[1]] = True
                     
-                elif command[1] == "1":         # 최댓값 삭제
-                    # while max_heap and selected[max_heap[0][1]]:
-                    #     heappop(max_heap)
-                    if max_heap:
-                        selected[heappop(max_heap)[1]] = True
+                elif command[1] == "1" and max_heap:         # 최댓값 삭제
+                    selected[heappop(max_heap)[1]] = True
 
             while min_heap and selected[min_heap[0][1]]:
                 heappop(min_heap)
             while max_heap and selected[max_heap[0][1]]:
                 heappop(max_heap)
-
-            # print("max_heap = ", max_heap)
-            # print("min_heap = ", min_heap)
-            # print("selected = ", selected)
 
         if not max_heap or not min_heap:
             print("EMPTY")
