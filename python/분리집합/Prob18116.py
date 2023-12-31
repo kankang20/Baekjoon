@@ -3,12 +3,10 @@
 
 import sys
 
-parent = dict()
+parent = [num for num in range(10**6 + 1)]
+count = [1] * (10**6 + 1)
 
 def find(x):
-    if x not in parent.keys():
-        parent[x] = x
-
     if parent[x] != x:
         parent[x] = find(parent[x])
     return parent[x]
@@ -16,10 +14,17 @@ def find(x):
 def union(a, b):
     a = find(a)
     b = find(b)
-    if a < b:
+
+    if a == b:
+        pass
+    elif a < b:
         parent[b] = a
+        count[a] += count[b]
+        count[b] = 0
     else:
         parent[a] = b
+        count[b] += count[a]
+        count[a] = 0
 
 def solution():
 
@@ -31,10 +36,7 @@ def solution():
 
         if command[0] == "I":
             union(int(command[1]), int(command[2]))
-            # print(parent)
-
         elif command[0] == "Q":
-            number = int(command[1])
-            print(1 if number not in parent.keys() else list(parent.values()).count(number))
-
+            print(count[find(int(command[1]))])
+            
 solution()
