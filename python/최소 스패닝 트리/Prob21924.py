@@ -1,8 +1,4 @@
-
-""" 골드 4. 도시 건설 """
-
 import sys
-from heapq import heappush, heappop
 
 def find(parent, x):
     if parent[x] != x:
@@ -30,13 +26,14 @@ def solution():
     edges = []
     for _ in range(M):
         a, b, c = map(int, input().split())     # 두 건물 a, b, 건물 사이 도로를 만들때 드는 비용 c
-        heappush(edges, (c, a, b))
+        edges.append((c, a, b))
+    
+    edges.sort()
 
     answer_cost = 0
     answer_count = 0
 
-    while edges:
-        c, a, b = heappop(edges)
+    for (c, a, b) in edges:
         answer_cost += c
         if find(parent, a) != find(parent, b):
             union(parent, a, b)
