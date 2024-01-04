@@ -51,7 +51,7 @@ def people_move(N, L, R, people:list):
                     visited[nr][nc] = True
                     total_people += people[nr][nc]
 
-        divide_people = round(total_people / len(city))
+        divide_people = int(total_people / len(city))
         for (r, c) in city:
             people[r][c] = divide_people
 
