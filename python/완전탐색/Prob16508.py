@@ -12,57 +12,46 @@ def solution():
     T = input().rstrip()        # 만들어야 하는 단어
     N = int(input())            # 전공책의 개수
     
-    book = []
+    books = []
     for _ in range(N):
         temp = list(input().split())
-        book.append((int(temp[0]), temp[1]))
+        books.append((int(temp[0]), temp[1]))
 
-    word = dict()
+    words = dict()
     for t in T:
-        word[t] = word.get(t, 0) + 1
+        words[t] = words.get(t, 0) + 1
 
-    selected_word = [False] * N
+    selected_book = [0] * N
 
-    check(T, N, book, word, 0, selected_word, 0)
+    dfs(T, N, books, words, selected_book, 0)
 
+def dfs(T, N, books:list, words:dict, selected_book:list, price:int):
 
-def check(T, N, book:list, word:dict, price:int, selected_word:list, seleced_count:int):
+    print(words, selected_book, price)
 
-    print(word, price, selected_word)
-
-    # 전공책에서 모든 단어를 선택하였으면    
-    if not word:
+    if not words:
+        global answer
         answer = min(answer, price)
         return
     
-    # 모든 전공책을 확인하였으면
-    if not seleced_count:
+    if selected_book.count(0) == 0:
         return
-    
-    for i in range(N):
 
-        flag = False
+    for idx in range(N):
 
-        pr, na = book[i]
+        print(words, idx)
 
-        if selected_word[i]:
+        if selected_book[idx]:
             continue
 
-        for n in na:
-
-            if n in word.keys():
-                word[n] -= 1
-                flag = True
-                if word[n] == 0:
-                    word.pop(n)
-        
-        if flag:
-            selected_word[i] = True
-            seleced_count += 1
-            price += pr
-
-        check(T, N, book, word, price, selected_word, seleced_count)
-
+        for t in T:
+            if t in words.keys() and t in books[idx][1]:
+                words[t] -= 1
+                selected_book[idx] = 1
+                price += books[idx][0]
+                if words[t] == 0:
+                    words.pop(t)
+                dfs(T, N, books, words, selected_book, price)
 
 solution()
 print(answer if answer < 1e9 else -1)
