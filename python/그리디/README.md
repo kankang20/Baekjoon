@@ -4,8 +4,6 @@
 
 <br>
 
-<!-- 💭 [진행 중]  ✔️ [완료] -->
-
 | **번호** | **문제** | **난이도** | **풀이 여부** |
 |:--------:|:--------|:----------:|:-----------:|
 | 01 | &nbsp;[2891. 카약과 강풍](https://www.acmicpc.net/problem/2891)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/16c246cd-0ac7-4c70-8e59-ae53094efefd" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob2891.py)&nbsp; |
@@ -21,3 +19,4 @@
 | 11 | &nbsp;[1092. 배](https://www.acmicpc.net/problem/1092)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/85149378-3937-4538-8a9b-1b178253c958" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob1092.py)&nbsp; |
 | 12 | &nbsp;[20115. 에너지 드링크](https://www.acmicpc.net/problem/20115)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/07accbcc-b7bc-4a50-a82e-37f90db6a48f" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob20115.py)&nbsp; |
 | 13 | &nbsp;[1781. 컵라면](https://www.acmicpc.net/problem/1781)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/0623933e-9a3e-4ed2-9d39-f2a9820072b8" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob1781.py)&nbsp; |
+| 14 | &nbsp;[1543. 문서 검색](https://www.acmicpc.net/problem/1543)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/16c246cd-0ac7-4c70-8e59-ae53094efefd" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EA%B7%B8%EB%A6%AC%EB%94%94/Prob1543.py)&nbsp; |
