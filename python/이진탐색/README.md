@@ -1,4 +1,4 @@
-## ⭐️ 이진탐색 문제 풀이 ⭐️ 
+## ⭐️ 이진탐색(이분탐색) 문제 풀이 ⭐️ 
 
 참고. https://github.com/tony9402/baekjoon/tree/main/binary_search
 
@@ -17,3 +17,4 @@
 | 09 | &nbsp;[22871. 징검다리 건너기 (large)](https://www.acmicpc.net/problem/22871)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/b865c934-26be-488e-aec2-cfaf969e1632" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob22871.py)&nbsp; |
 | 10 | &nbsp;[1561. 놀이 공원](https://www.acmicpc.net/problem/1561)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/0623933e-9a3e-4ed2-9d39-f2a9820072b8" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob1561.py)&nbsp; |
 | 11 | &nbsp;[1092. 배](https://www.acmicpc.net/problem/1092)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/85149378-3937-4538-8a9b-1b178253c958" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob1092.py)&nbsp; |
+| 12 | &nbsp;[16498. 작은 벌점](https://www.acmicpc.net/problem/16498)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/85149378-3937-4538-8a9b-1b178253c958" width="20"/>&nbsp;&nbsp; | &nbsp;💬 [진행 중]  (https://github.com/yuuforest/Baekjoon/blob/main/python/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89/Prob16498.py)&nbsp; |
