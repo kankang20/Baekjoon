@@ -6,7 +6,6 @@ import sys
 def solution():
 
     input = sys.stdin.readline
-
     A, B, C = map(int, input().split())
     
     cards = []
@@ -14,7 +13,6 @@ def solution():
         cards.append(sorted(list(map(int, input().split()))))
 
     answer = 1e9
-
     for a in cards[0]:
 
         b = search(cards[1], a)
@@ -29,7 +27,7 @@ def solution():
 
 def search(card, target):
 
-    answer = 0
+    answer = 1e9
     start, end = 0, len(card)-1
 
     while start <= end:
@@ -39,7 +37,9 @@ def search(card, target):
         if abs(card[mid] - target) < abs(answer - target):
             answer = card[mid]
 
-        if card[mid] < target:
+        if card[mid] == target:
+            return card[mid]
+        elif card[mid] < target:
             start = mid + 1
         else:
             end = mid - 1
