@@ -18,10 +18,8 @@ def solution():
         b = search(cards[1], a)
         c1 = search(cards[2], a)
         c2 = search(cards[2], b)
-
-        temp1 = max(a, b, c1) - min(a, b, c1)
-        temp2 = max(a, b, c2) - min(a, b, c2)
-        answer = min(answer, temp1, temp2)
+        
+        answer = min(answer, max(a, b, c1) - min(a, b, c1), max(a, b, c2) - min(a, b, c2))
 
     return answer
 
