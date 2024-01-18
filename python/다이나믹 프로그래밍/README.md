@@ -1,4 +1,4 @@
-## ⭐️ 다이나믹 프로그래밍1 문제 풀이 ⭐️ 
+## ⭐️ 다이나믹 프로그래밍 문제 풀이 ⭐️ 
 
 참고. https://github.com/tony9402/baekjoon/tree/main/dynamic_programming_1
 
@@ -14,4 +14,4 @@
 | 04 | &nbsp;[1351. 무한 수열](https://www.acmicpc.net/problem/1351)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/85149378-3937-4538-8a9b-1b178253c958" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Prob1351.py)&nbsp; |
 | 05 | &nbsp;[2133. 타일 채우기](https://www.acmicpc.net/problem/2133)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/faf1d147-b8a1-40f5-9f8f-604d534ab16c" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Prob2133.py)&nbsp; |
 | 06 | &nbsp;[9084. 동전](https://www.acmicpc.net/problem/9084)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/85149378-3937-4538-8a9b-1b178253c958" width="20"/>&nbsp;&nbsp; | &nbsp;💬 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Prob9084.py)&nbsp; |
-| 07 | &nbsp;[1890. 점프](https://www.acmicpc.net/problem/1890)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/b865c934-26be-488e-aec2-cfaf969e1632" width="20"/>&nbsp;&nbsp; | &nbsp;💬 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Prob1890.py)&nbsp; |
+| 07 | &nbsp;[1890. 점프](https://www.acmicpc.net/problem/1890)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/b865c934-26be-488e-aec2-cfaf969e1632" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/python/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Prob1890.py)&nbsp; |
