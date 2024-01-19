@@ -8,16 +8,12 @@ def solution():
 
     S = list(map(int, input().rstrip()))
 
-    pattern, idx = [], 0
+    count, idx = [0, 0], 0
     while idx < len(S):
-        pattern.append(S[idx])
+        count[S[idx]] += 1
         while idx < len(S)-1 and S[idx] == S[idx+1]:
             idx += 1
         idx += 1
-
-    count = [0] * 2
-    for p in pattern:
-        count[p] += 1
 
     return min(count)
 
