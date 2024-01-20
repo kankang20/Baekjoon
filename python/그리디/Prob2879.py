@@ -10,24 +10,23 @@ def solution():
     current = list(map(int, input().split()))
     target = list(map(int, input().split()))
 
-    diff = [(target[i] - current[i]) for i in range(N)]
+    answer = 0
 
-    idx, answer = 0, 0
+    now, idx = 0, 0
     while idx < N:
-
-        day = abs(diff[idx])
-
-        if diff[idx] < 0:
-            while idx < N and diff[idx] < 0:
-                day = max(day, abs(diff[idx]))
-                idx += 1
-        elif diff[idx] > 0:
-            while idx < N and diff[idx] > 0:
-                day = max(day, abs(diff[idx]))
-                idx += 1
-            
+        now = target[idx] - current[idx]
+        day = abs(now)
+        while idx < N-1 and check(now, target[idx+1] - current[idx+1]):
+            day = max(day, abs(target[idx+1] - current[idx+1]))
+            idx += 1
         answer += day
+        idx += 1
 
     return answer
+
+def check(num1, num2):
+    if (num1 > 0 and num2 > 0) or (num1 < 0 and num2 < 0):
+        return True
+    return False
 
 print(solution())
