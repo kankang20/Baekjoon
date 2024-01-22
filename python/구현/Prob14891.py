@@ -2,7 +2,7 @@
 """ 골드 5. 톱니바퀴 """
 
 import sys
-from collections import deque
+from collections import deque           # rotate 활용하기
 
 def solution():
     input = sys.stdin.readline
