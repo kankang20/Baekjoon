@@ -10,14 +10,17 @@ def solution():
     R, C = map(int, input().split())
     picture = [list(map(int, input().split())) for _ in range(R)]
 
-    answer = []
+    answer_count = 0
+    answer_weight = 0
+
     for r in range(R):
         for c in range(C):
             if picture[r][c] == 1:
-                answer.append(bfs(R, C, picture, r, c))
+                answer_count += 1
+                answer_weight = max(answer_weight, bfs(R, C, picture, r, c))
 
-    print(len(answer))
-    print(max(answer) if answer else 0)
+    print(answer_count)
+    print(answer_weight)
 
 def bfs(R, C, picture, r, c):
 
