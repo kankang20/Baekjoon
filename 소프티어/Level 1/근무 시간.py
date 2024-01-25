@@ -2,19 +2,15 @@
 """ Lv 1. 근무 시간 """
 
 import sys
+import re
 
 def solution():
     input = sys.stdin.readline
 
     answer = 0
     for _ in range(5):
-        
-        start, end = input().rstrip().split()
-        
-        h1,m1 = map(int, start.split(":"))
-        h2,m2 = map(int, end.split(":"))
-
-        answer += (h2 * 60 + m2) - (h1 * 60 + m1)
+        temp = list(map(int, re.split(r':| ', input().rstrip())))
+        answer += (temp[2] * 60 + temp[3]) - (temp[0] *60 + temp[1])
 
     return answer
     
