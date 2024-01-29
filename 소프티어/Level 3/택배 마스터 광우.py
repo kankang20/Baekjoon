@@ -12,25 +12,26 @@ def solution():
 
     answer = 1e9
     for rail in list(permutations(weight, N)):
-        answer = min(answer, calculate_weight(N, M, K, rail))
+
+        weight = 0
+        idx, count = 0, 0
+        while count < K:
+
+            temp_weight = rail[idx % N]
+            while temp_weight + rail[(idx+1) % N] <= M:
+                idx += 1
+                temp_weight += rail[idx % N]
+
+            weight += temp_weight
+
+            if weight > answer:
+                break
+
+            idx += 1
+            count += 1
+
+        answer = min(answer, weight)
 
     return answer
-
-def calculate_weight(N:int, M:int, K:int, rail:list):
-
-    weight = 0
-    idx, count = 0, 0
-    while count < K:
-
-        temp_weight = rail[idx % N]
-        while temp_weight + rail[(idx+1) % N] <= M:
-            idx += 1
-            temp_weight += rail[idx % N]
-
-        weight += temp_weight
-        idx += 1
-        count += 1
-
-    return weight
 
 print(solution())
