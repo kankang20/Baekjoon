@@ -21,8 +21,14 @@ def solution():
             end += 1
             count += numbers[end]
         elif count > M:
-            count -= numbers[start]
-            start += 1
+            if start == end:
+                if end == N-1:
+                    break
+                end += 1
+                count += numbers[end]
+            else:
+                count -= numbers[start]
+                start += 1
 
     return answer
 
