@@ -6,4 +6,24 @@ import sys
 def solution():
     input = sys.stdin.readline
 
+    N, M = map(int, input().split())
+    numbers = list(map(int, input().split()))
+
+    answer = 0
+    start, end, count = 0, 0, numbers[0]
+    while end < N and start <= end:
+
+        if count <= M:
+            if count == M:
+                answer += 1
+            if end == N-1:
+                break
+            end += 1
+            count += numbers[end]
+        elif count > M:
+            count -= numbers[start]
+            start += 1
+
+    return answer
+
 print(solution())
