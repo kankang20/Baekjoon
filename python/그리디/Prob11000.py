@@ -11,17 +11,19 @@ def solution():
 
     meeting = []
     for _ in range(N):
-        s, t = map(int, input().split())
-        heappush(meeting, (t, s))
+        start, end = map(int, input().split())
+        heappush(meeting, (start, end))
 
-    answer, previous_t = 0, 0
+    room = []
+    heappush(room, heappop(meeting)[1])
     while meeting:
+        start, end = heappop(meeting)
+        if start < room[0]:
+            heappush(room, end)
+        else:
+            heappop(room)
+            heappush(room, end)
 
-        t, s = heappop(meeting)
-        if previous_t <= s:
-            answer += 1
-            previous_t = t
-    
-    return answer
+    return len(room)
     
 print(solution())
