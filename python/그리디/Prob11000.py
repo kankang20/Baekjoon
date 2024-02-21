@@ -12,12 +12,13 @@ def solution():
     meeting = []
     for _ in range(N):
         start, end = map(int, input().split())
-        heappush(meeting, (start, end))
+        meeting.append((start, end))
+
+    meeting.sort()
 
     room = []
-    heappush(room, heappop(meeting)[1])
-    while meeting:
-        start, end = heappop(meeting)
+    heappush(room, meeting[0][1])
+    for (start, end) in meeting[1:]:
         if start < room[0]:
             heappush(room, end)
         else:
