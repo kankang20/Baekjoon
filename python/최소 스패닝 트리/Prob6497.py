@@ -2,6 +2,7 @@
 """ 골드 4. 전력난 """
 
 import sys
+from heapq import heappush, heappop
 
 def find(parent, x):
     if parent[x] != x:
@@ -21,22 +22,21 @@ def union(parent, x, y):
 
 def calculate_edge(parent:list, edges:list, count:int, max_edge_count:int):
 
-    edges.sort()
     edge_count = 0
-
-    for edge in edges:
-        cost, x, y = edge
+    while edges:
+        cost, x, y = heappop(edges)
         if find(parent, x) != find(parent, y):
             union(parent, x, y)
             count -= cost
             edge_count += 1
-
+        
         if edge_count == max_edge_count:
             return count
 
 def solution():
     input = sys.stdin.readline
 
+    edges = []
     while True:
 
         M, N = map(int, input().split())    # 집의 수 M, 길의 수 N
@@ -44,12 +44,12 @@ def solution():
             break
     
         parent = [num for num in range(M)]
-        edges = []
+        edges.clear()
 
         count = 0
         for _ in range(N):
             x, y, z = map(int, input().split())     # x번과 y번 집 사이의 거리가 Z
-            edges.append((z, x, y))
+            heappush(edges, (z, x, y))
             count += z
 
         print(calculate_edge(parent, edges, count, M-1))
