@@ -2,6 +2,7 @@
 """ 골드 5. 선 긋기 """
 
 import sys
+from heapq import heappush, heappop
 
 def solution():
     input = sys.stdin.readline
@@ -11,14 +12,13 @@ def solution():
     lines = []
     for _ in range(N):
         s, t = map(int, input().split())
-        lines.append((s, t))
-
-    lines.sort()
+        heappush(lines, (s, t))
 
     answer = 0
     start, target = 0, 0
-    for (s, t) in lines:
-        
+    while lines:
+        s, t = heappop(lines)
+
         if target < s:
             answer += (target - start)
             start, target = s, t
