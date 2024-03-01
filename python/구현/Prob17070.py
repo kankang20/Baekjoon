@@ -25,6 +25,7 @@ def bfs(N:int, board:list):
 
         if r == N-1 and c == N-1:
             answer += 1
+            continue
 
         if dir == 0:    # 방향이 가로(0)라면
             if c + 1 < N and board[r][c+1] == 0:
