@@ -27,25 +27,14 @@ def bfs(N:int, board:list):
             answer += 1
             continue
 
-        if dir == 0:    # 방향이 가로(0)라면
-            if c + 1 < N and board[r][c+1] == 0:
-                q.append((r, c+1, 0))
-            if r + 1 < N and c + 1 < N and board[r][c+1] == 0 and board[r+1][c] == 0 and board[r+1][c+1] == 0:
-                q.append((r+1, c+1, 2))
-
-        elif dir == 1:  # 방향이 세로(1)라면
-            if r + 1 < N and board[r+1][c] == 0:
-                q.append((r+1, c, 1))
-            if r + 1 < N and c + 1 < N and board[r][c+1] == 0 and board[r+1][c] == 0 and board[r+1][c+1] == 0:
-                q.append((r+1, c+1, 2))
+        if (dir == 0 or dir == 2) and c + 1 < N and board[r][c+1] == 0:
+            q.append((r, c+1, 0))
         
-        else:
-            if c + 1 < N and board[r][c+1] == 0:
-                q.append((r, c+1, 0))
-            if r + 1 < N and board[r+1][c] == 0:
-                q.append((r+1, c, 1))
-            if r + 1 < N and c + 1 < N and board[r][c+1] == 0 and board[r+1][c] == 0 and board[r+1][c+1] == 0:
-                q.append((r+1, c+1, 2))
+        if (dir == 1 or dir == 2) and r + 1 < N and board[r+1][c] == 0:
+            q.append((r+1, c, 1))
+
+        if r + 1 < N and c + 1 < N and board[r][c+1] == 0 and board[r+1][c] == 0 and board[r+1][c+1] == 0:
+            q.append((r+1, c+1, 2))
 
     return answer
 
