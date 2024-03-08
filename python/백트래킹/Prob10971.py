@@ -29,6 +29,9 @@ def search_path(selected:list, start:int, end:int, count_city:int, cost:int):
             answer = min(answer, cost + board[end][start])
         return
     
+    if cost >= answer:
+        return
+    
     for c in range(N):
         if not selected[c] and board[end][c] > 0:
             selected[c] = True
