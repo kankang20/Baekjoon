@@ -48,6 +48,7 @@ def solution():
             board[r][c] += count
 
         # 5. 바구니에 저장된 물의 양이 2 이상인 칸에 구름 생성 - 물의 양 2 감소 (구름이 사라진 칸이면 안됨)
+        cloud_water = set(cloud_water)
         for r in range(N):
             for c in range(N):
                 if (r, c) not in cloud_water and board[r][c] >= 2:
