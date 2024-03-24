@@ -25,6 +25,7 @@ def solution():
         if count >= K:
             return
         
+        board[sr][sc] = 'T'
         for d in range(4):
             nr = sr + dr[d]
             nc = sc + dc[d]
