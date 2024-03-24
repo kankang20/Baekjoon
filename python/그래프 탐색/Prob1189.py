@@ -2,7 +2,6 @@
 """ 실버 1. 컴백홈 """
 
 import sys
-from collections import deque
 
 def solution():
     input = sys.stdin.readline
@@ -13,37 +12,30 @@ def solution():
     dr = [0, 0, 1, -1]
     dc = [1, -1, 0, 0]
 
-    def bfs(sr, sc):
+    answer = 0
 
-        q = deque()
-        q.append((sr, sc, 1))
+    def dfs(sr, sc, count):
 
-        selected = [[False] * C for _ in range(R)]
-        selected[sr][sc] = True
-        
-        answer = 0
-        while q:
-
-            r, c, dis = q.popleft()
-            selected[r][c] = True
-
-            if r == 0 and c == C-1 and dis == K:
+        if sr == 0 and sc == C-1:
+            if count == K:
+                nonlocal answer
                 answer += 1
+            return
+        
+        if count >= K:
+            return
+        
+        for d in range(4):
+            nr = sr + dr[d]
+            nc = sc + dc[d]
 
-            if dis >= K:
-                continue
+            if 0 <= nr < R and 0 <= nc < C and board[nr][nc] == '.':
+                board[nr][nc] = 'T'
+                dfs(nr, nc, count+1)
+                board[nr][nc] = '.'
 
-            for d in range(4):
-                nr = r + dr[d]
-                nc = c + dc[d]
+    dfs(R-1, 0, 1)
 
-                if nr < 0 or nr >= R or nc < 0 or nc >= C or board[nr][nc] == 'T' or selected[nr][nc]:
-                    continue
-
-                q.append((nr, nc, dis + 1))
-
-        return answer
-    
-    return bfs(R-1, 0)
+    return answer
     
 print(solution())
