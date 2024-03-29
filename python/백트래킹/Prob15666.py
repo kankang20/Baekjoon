@@ -6,29 +6,20 @@ import sys
 def solution():
     input = sys.stdin.readline
 
-    global N, M, numbers
     N, M = map(int, input().split())
-    numbers = list(input().split())
+    numbers = sorted(list(set(map(int, input().split()))))
 
-    numbers.sort()
+    N = len(numbers)
 
-    global answer
-    answer = set()
+    def dfs(count:int, idx:int, answer:str):
 
-    dfs(0, 0, [])
+        if count == M:
+            print(answer[1:])
+            return
+        
+        for jdx in range(idx, N):
+            dfs(count+1, jdx, answer + ' ' + str(numbers[jdx]))
 
-    for ans in sorted(list(answer)):
-        print(ans)
+    dfs(0, 0, '')
 
-def dfs(count:int, pos:int, selected:list):
-
-    if count == M:
-        answer.add(" ".join(selected))
-        return 
-    
-    for idx in range(pos, N):
-        selected.append(numbers[idx])
-        dfs(count+1, idx, selected)
-        selected.pop()
-    
 solution()
