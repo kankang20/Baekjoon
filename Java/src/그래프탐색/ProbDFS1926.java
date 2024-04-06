@@ -11,6 +11,9 @@ public class ProbDFS1926 {
     static int R, C;
     static int[][] board;
     static boolean[][] selected;
+
+    static int count;
+    static int paint_area;
     
     public static void main(String[] args) throws IOException {
 
@@ -31,12 +34,14 @@ public class ProbDFS1926 {
         }
 
         int paint_count = 0;
-        int paint_area = 0;
+        paint_area = 0;
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
                 if (board[i][j] == 1 && !selected[i][j]) {
-                    // paint_area = Math.max(paint_area, bfs(i, j));
                     paint_count += 1;
+                    count = 0;
+                    dfs(i, j);
+                    paint_area = Math.max(count, paint_area);
                 }
             }
         }
@@ -45,4 +50,20 @@ public class ProbDFS1926 {
         System.out.println(paint_area);
     }
 
+    public static void dfs(int sr, int sc) {
+
+        selected[sr][sc] = true;
+        count += 1;
+
+        for (int d = 0; d < 4; d++) {
+            int nr = sr + dr[d];
+            int nc = sc + dc[d];
+
+            if (nr < 0 || nr >= R || nc < 0 || nc >= C || selected[nr][nc] || board[nr][nc] == 0) {
+                continue;
+            }
+
+            dfs(nr, nc);
+        }
+    }
 }
