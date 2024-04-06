@@ -1,7 +1,6 @@
 package 문자열;
 
 import java.io.*;
-import java.util.*;
 
 public class Prob1316 {
     
@@ -15,24 +14,26 @@ public class Prob1316 {
         for (int n = 0; n < N; n++) {
 
             String word = br.readLine();
-            int length = word.length();
 
-            Set<Character> check = new HashSet<>();
-
-            int idx = 0;
+            boolean[] selected = new boolean[26];
+            int check_word = 0;
             boolean flag = true;
-            while (idx < length) {
+            
+            for (int i = 0; i < word.length(); i++) {
 
-                char temp = word.charAt(idx);
+                int temp = word.charAt(i);
 
-                if (check.contains(temp)) {
-                    flag = false;
-                    break;
-                }
+                if (check_word != temp) {
 
-                check.add(temp);
-                while (idx < length && word.charAt(idx) == temp) {
-                    idx++;
+                    if (selected[temp - 'a']) {
+                        flag = false;
+                        break;
+                    } else {
+                        selected[temp - 'a'] = true;
+                        check_word = temp;
+                    }
+                } else {
+                    continue;
                 }
             }
 
