@@ -7,31 +7,45 @@ def solution():
     input = sys.stdin.readline
 
     N, M = map(int, input().split())
-    books = sorted(list(map(int, input().split())))
+    books = list(map(int, input().split()))
 
-    # -39 -37 -29 -28 -6 2 11
+    left = []
+    right = []
 
-    answer = 0
+    for book in books:
+        if book < 0:
+            left.append(book)
+        else:
+            right.append(book)
 
-    print(books)
+    def move(position:list):
 
-    target, temp = 0, -1
-    while target < N:
+        answer = 0
+        length, target = len(position), 0
 
-        temp, count = target, 1
-        while temp < (N-1) and books[temp] * books[temp+1] > 0 and count < M:
-            temp += 1
-            count += 1
-        
-        print(target, temp)
+        while target < length:
 
-        # answer += max(abs(books[target]), abs(books[temp])) * 2
-        answer += abs(books[target]) * 2
-        target = temp + 1
+            temp, count = target, 1
+            while temp < (length-1) and position[temp] * position[temp+1] > 0 and count < M:
+                temp += 1
+                count += 1
 
-        print(answer)
+            answer += max(abs(position[target]), abs(position[temp])) * 2
+            target = temp + 1
+
+        return answer
     
+    left.sort()
+    right.sort(reverse=True)
 
-    return answer 
+    answer = move(left)
+    answer += move(right)
+
+    if left and right:
+        return answer - max(abs(left[0]), right[0])
+    elif left:
+        return answer + left[0]
+    elif right:
+        return answer - right[0]
 
 print(solution())
