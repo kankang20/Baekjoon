@@ -26,26 +26,18 @@ def solution():
         while target < length:
 
             temp, count = target, 1
-            while temp < (length-1) and position[temp] * position[temp+1] > 0 and count < M:
+            while temp < (length-1) and count < M:
                 temp += 1
                 count += 1
 
-            answer += max(abs(position[target]), abs(position[temp])) * 2
+            answer += (abs(position[target]) * 2)
             target = temp + 1
 
-        return answer
-    
-    left.sort()
-    right.sort(reverse=True)
+        return answer, abs(position[0]) if position else 0
 
-    answer = move(left)
-    answer += move(right)
+    left_answer, left_value = move(sorted(left))
+    right_answer, right_value = move(sorted(right, reverse=True))
 
-    if left and right:
-        return answer - max(abs(left[0]), right[0])
-    elif left:
-        return answer + left[0]
-    elif right:
-        return answer - right[0]
+    return left_answer + right_answer - max(left_value, right_value)
 
 print(solution())
