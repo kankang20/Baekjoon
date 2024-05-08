@@ -13,18 +13,19 @@ def solution():
     dr = [0, 0, 1, -1]
     dc = [1, -1, 0, 0]
 
-    visited = [[0] * C for _ in range(R)]
+    visited = [[[0] * C for _ in range(R)] for _ in range(2)]
 
     def bfs():
+
         q = deque()
-        q.append((0, 0, 1))
-        visited[0][0] = 1
+        q.append((0, 0, 0))
+        visited[0][0][0] = 1
 
         while q:
 
-            r, c, count = q.popleft()
+            r, c, flag = q.popleft()
             if r == (R-1) and c == (C-1):
-                return visited[r][c]
+                return visited[flag][r][c]
 
             for d in range(4):
                 nr = r + dr[d]
@@ -33,17 +34,16 @@ def solution():
                 if not checkBoundry(nr, nc):
                     continue
 
-                if not visited[nr][nc] and not board[nr][nc]:
-                    q.append((nr, nc, count))
-                    visited[nr][nc] = visited[r][c] + 1
+                # 벽을 부수고 이동
+                if flag == 0 and board[nr][nc] == 1 and visited[1][nr][nc] == 0:
+                    q.append((nr, nc, 1))
+                    visited[1][nr][nc] = visited[0][r][c] + 1
 
-                if count:
-                    nr += dr[d]
-                    nc += dc[d]
+                # 벽을 부수지 않고 이동
+                if board[nr][nc] == 0 and visited[flag][nr][nc] == 0:
+                    q.append((nr, nc, flag))
+                    visited[flag][nr][nc] = visited[flag][r][c] + 1
 
-                    if checkBoundry(nr, nc) and not visited[nr][nc] and not board[nr][nc]:
-                        q.append((nr, nc, 0))
-                        visited[nr][nc] = visited[r][c] + 2
         return -1
 
     def checkBoundry(r, c):
