@@ -16,5 +16,4 @@ def solution():
     
     return keys[0] if len(keys) == 1 else ("?" if alp[keys[0]] == alp[keys[1]] else keys[0])
 
-
 print(solution())
