@@ -6,4 +6,13 @@ import sys
 def solution():
     input = sys.stdin.readline
 
+    word = input().rstrip()
+
+    answer = []
+    for idx in range(len(word)):
+        answer.append(word[idx:])
+
+    for ans in sorted(answer):
+        print(ans)
+
 solution()
