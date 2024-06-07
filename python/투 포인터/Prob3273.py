@@ -10,12 +10,20 @@ def solution():
     number = sorted(list(map(int, input().split())))
     X = int(input())
 
-    lp, rp = 0, 0
-
+    start, end = 0, N-1
     answer = 0
-    while rp < N:
-        
+    while start < end:
+
+        temp = number[start] + number[end]
+
+        if temp == X:
+            answer += 1
     
+        if temp <= X:
+            start += 1
+        else:
+            end -= 1 
+
     return answer
 
 print(solution())
