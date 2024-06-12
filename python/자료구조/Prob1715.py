@@ -15,8 +15,9 @@ def solution():
 
     answer = 0
     for _ in range(N-1):
-        answer += (heappop(card) + heappop(card))
-        heappush(card, answer)
+        temp = (heappop(card) + heappop(card))
+        answer += temp
+        heappush(card, temp)
     
     return answer
 
