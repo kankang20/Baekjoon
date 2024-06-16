@@ -15,52 +15,57 @@ def solution():
 
     global R, C
     R, C = map(int, input().split())
-    board = [list(map(int, input().split())) for _ in range(R)]
 
-    make_wall(board, 0)
+    global board, virus, cnt_space
+    board = []
+    virus = []
+
+    cnt_space = R * C
+    for r in range(R):
+        board.append(list(map(int, input().split())))
+        for c in range(C):
+            if board[r][c] > 0:
+                cnt_space -= 1
+                if board[r][c] == 2:
+                    virus.append((r, c))
+
+    make_wall(0)
 
     return answer
 
-def make_wall(board:list, count:int):
+def make_wall(count:int):
 
     if count == 3:
         global answer
-        answer = max(answer, bfs(board))
+        answer = max(answer, bfs())
         return
     
     for r in range(R):
         for c in range(C):
             if board[r][c] == 0:
                 board[r][c] = 1
-                make_wall(board, count+1)
+                make_wall(count+1)
                 board[r][c] = 0
 
-
-def bfs(board:list):
+def bfs():
     temp_board = copy.deepcopy(board)
 
-    virus = deque()
-    for r in range(R):
-        for c in range(C):
-            if temp_board[r][c] == 2:
-                virus.append((r, c))
+    vv = deque()
+    for (vr, vc) in virus:
+        vv.append((vr, vc))
 
-    while virus:
-        r, c = virus.popleft()
+    cnt = 0
+    while vv:
+        r, c = vv.popleft()
 
         for d in range(4):
             nr = r + dr[d]
             nc = c + dc[d]
             if 0 <= nr < R and 0 <= nc < C and temp_board[nr][nc] == 0:
-                virus.append((nr, nc))
+                vv.append((nr, nc))
                 temp_board[nr][nc] = 2
+                cnt += 1
 
-    return count_safe_area(temp_board)
-
-def count_safe_area(board:list):
-    cnt = 0
-    for r in range(R):
-        cnt += board[r].count(0)
-    return cnt
+    return cnt_space - cnt - 3
     
 print(solution())
