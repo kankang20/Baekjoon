@@ -3,27 +3,19 @@
 
 import sys
 from collections import deque
+import copy
 
 dr = [0, 0, 1, -1]
 dc = [1, -1, 0, 0]
 
 answer = 0
-virus = deque()
 
 def solution():
     input = sys.stdin.readline
 
     global R, C
     R, C = map(int, input().split())
-
-    board = []
-
-    for r in range(R):
-        board.append(list(map(int, input().split())))
-        for c in range(C):
-            if board[r][c] == 2:
-                virus.append((r, c))
-
+    board = [list(map(int, input().split())) for _ in range(R)]
 
     make_wall(board, 0)
 
@@ -32,9 +24,8 @@ def solution():
 def make_wall(board:list, count:int):
 
     if count == 3:
-        vv = virus
         global answer
-        answer = max(answer, bfs(board, vv))
+        answer = max(answer, bfs(board))
         return
     
     for r in range(R):
@@ -45,36 +36,31 @@ def make_wall(board:list, count:int):
                 board[r][c] = 0
 
 
-def bfs(board:list, virus:deque):
+def bfs(board:list):
+    temp_board = copy.deepcopy(board)
 
-    selected = [[False] * C for _ in range(R)]
+    virus = deque()
+    for r in range(R):
+        for c in range(C):
+            if temp_board[r][c] == 2:
+                virus.append((r, c))
 
-    count = 0
     while virus:
-
         r, c = virus.popleft()
 
         for d in range(4):
             nr = r + dr[d]
             nc = c + dc[d]
+            if 0 <= nr < R and 0 <= nc < C and temp_board[nr][nc] == 0:
+                virus.append((nr, nc))
+                temp_board[nr][nc] = 2
 
-            if nr < 0 or nr >= R or nc < 0 or nc >= C:
-                continue
+    return count_safe_area(temp_board)
 
-            if board[nr][nc] > 0 or selected[nr][nc]:
-                continue
-
-            virus.append((nr, nc))
-            selected[nr][nc] = True
-
-            count += 1
+def count_safe_area(board:list):
+    cnt = 0
+    for r in range(R):
+        cnt += board[r].count(0)
+    return cnt
     
-    return count
-    
-
-
-
-
-
-
 print(solution())
