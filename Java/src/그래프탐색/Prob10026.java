@@ -3,7 +3,7 @@ package 그래프탐색;
 import java.util.*;
 import java.io.*;
 
-public class ProbBFS10026 {
+public class Prob10026 {
 
     static int[] dr = {0, 0, -1, 1};
     static int[] dc = {1, -1, 0, 0};
