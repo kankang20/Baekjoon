@@ -3,7 +3,7 @@ package 그래프탐색;
 import java.io.*;
 import java.util.*;
 
-public class ProbBFS7569 {
+public class Prob7569 {
 
     static int H, R, C;
     static int[][][] board;
