@@ -8,7 +8,6 @@ public class Prob2178 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         int R = Integer.parseInt(st.nextToken());
