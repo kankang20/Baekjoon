@@ -12,6 +12,5 @@
 | 04 | &nbsp;[11650. 좌표 정렬하기](https://www.acmicpc.net/problem/11650)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/16c246cd-0ac7-4c70-8e59-ae53094efefd" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/Java/src/%EC%A0%95%EB%A0%AC/Prob11650.java)&nbsp; |
 | 05 | &nbsp;[11651. 좌표 정렬하기 2](https://www.acmicpc.net/problem/11651)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/16c246cd-0ac7-4c70-8e59-ae53094efefd" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/Java/src/%EC%A0%95%EB%A0%AC/Prob11651.java)&nbsp; |
 | 06 | &nbsp;[10814. 나이순 정렬](https://www.acmicpc.net/problem/10814)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/16c246cd-0ac7-4c70-8e59-ae53094efefd" width="20"/>&nbsp;&nbsp; | &nbsp;✔️ [완료](https://github.com/yuuforest/Baekjoon/blob/main/Java/src/%EC%A0%95%EB%A0%AC/Prob10814.java)&nbsp; |
-
-
+| 07 | &nbsp;[10825. 국영수](https://www.acmicpc.net/problem/10825)&nbsp;&nbsp; | &nbsp;&nbsp;<img src="https://github.com/yuuforest/Baekjoon/assets/97596022/3c7e9f4b-e603-404f-b612-258d66475421" width="20"/>&nbsp;&nbsp; | &nbsp;💬 [진행 중](https://github.com/yuuforest/Baekjoon/blob/main/Java/src/%EC%A0%95%EB%A0%AC/Prob10825.java)&nbsp; |
 
