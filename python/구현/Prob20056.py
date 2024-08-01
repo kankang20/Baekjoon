@@ -32,18 +32,49 @@ def solution():
         for r in range(N):
             for c in range(N):
                 
-                if len(board[r][c]) >= 2:
+                if len(board[r][c]) == 0:
+                    continue
+
+                if len(board[r][c]) == 1:
+                    nm, nd, ns = board[r][c][0]
+                    fireballs.append((r, c, nm, nd, ns))
+
+                else:
                     # 2-1. 같은 칸에 있는 파이어볼은 모두 하나로 합쳐진다.
                     # 2-2. 파이어볼은 4개의 파이어볼로 나누어진다.
                     # 2-3. 나누어진 파이어볼의 질량, 속력, 방향은 다음과 같다. 
-                    temp = board[r][c]
+                    totalf = 0      # 파이어볼의 개수
+                    totalm = 0      # 파이어볼 질량의 합
+                    totals = 0      # 파이어볼 속력의 합
 
-                    
+                    check = board[r][c][0][1] % 2
+                    flag = True
+                    for (m, d, s) in board[r][c]:
+                        totalf += 1
+                        totalm += m
+                        totals += s
+                        if d % 2 != check:
+                            flag = False
+                
+                    nm = totalm // 5
+                    ns = totals // totalf
 
+                    if nm == 0:
+                        continue
 
+                    if flag:    # 방향 [0, 2, 4, 6]
+                        for nd in [0, 2, 4, 6]:
+                            fireballs.append((r, c, nm, nd, ns))
+                    else:
+                        for nd in [1, 3, 5, 7]:
+                            fireballs.append((r, c, nm, nd, ns))
 
+    answer = 0
+    while fireballs:
+        _, _, m, _, _ = fireballs.popleft()
+        answer += m
 
-    
+    return answer
 
 
 print(solution())
