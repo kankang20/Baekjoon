@@ -10,25 +10,19 @@ def solution():
     S = input().rstrip()
     T = input().rstrip()
 
-    min_length = len(S)
-    answer = 0
+    target = T
 
-    def search(target:str, length:int):
-        
-        if length <= min_length:
-            if target == S:
-                nonlocal answer
-                answer = 1
-            return
-        
+    while len(S) <= len(target):
+
         if target[-1] == 'A':
-            search(target[:-1], length - 1)
+            target = target[:-1]
+        else:
+            target = target[:-1]
+            target = target[::-1]
         
-        if target[-1] == 'B':
-            search(target[:-1][::-1], length - 1)
-        
-    search(T, len(T))
+        if target == S:
+            return 1
 
-    return answer
+    return 0
 
 print(solution())
