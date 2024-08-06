@@ -2,6 +2,7 @@
 """ 골드 5. A와 B """
 
 import sys
+sys.setrecursionlimit(10**6)
 
 def solution():
     input = sys.stdin.readline
@@ -9,21 +10,24 @@ def solution():
     S = input().rstrip()
     T = input().rstrip()
 
-    max_length = len(T)
+    min_length = len(S)
     answer = 0
 
     def search(target:str, length:int):
         
-        if max_length <= length:
-            if T == target:
+        if length <= min_length:
+            if target == S:
                 nonlocal answer
                 answer = 1
             return
         
-        search(target + "A", length + 1)
-        search(target[::-1] + "B", length + 1)
-
-    search(S, len(S))
+        if target[-1] == 'A':
+            search(target[:-1], length - 1)
+        
+        if target[-1] == 'B':
+            search(target[:-1][::-1], length - 1)
+        
+    search(T, len(T))
 
     return answer
 
