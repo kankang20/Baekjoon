@@ -77,5 +77,4 @@ def solution():
 
     return sum(fireball[2] for fireball in fireballs)
 
-
 print(solution())
