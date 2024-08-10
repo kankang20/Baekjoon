@@ -44,3 +44,4 @@ elif answer_bnp > answer_timing:
     print("BNP")
 else:
     print("SAMESAME")
+    
