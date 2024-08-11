@@ -1,0 +1,24 @@
+
+-- Level 2
+
+-- 동물의 생물 종, 이름, 성별 및 중성화 여부
+    -- 이름이 없는 동물의 이름은 'NO NAME'
+    -- 아이디 순으로 조회 (오름차순)
+
+SELECT ANIMAL_TYPE, IFNULL(NAME, 'No name') AS NAME, SEX_UPON_INTAKE
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID
+
+SELECT ANIMAL_TYPE, IF(NAME IS NULL, 'No name', NAME) AS NAME, SEX_UPON_INTAKE
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID
+
+SELECT ANIMAL_TYPE, 
+        CASE
+            WHEN NAME IS NULL
+            THEN 'No name'
+            ELSE NAME
+        END, 
+        SEX_UPON_INTAKE
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID
