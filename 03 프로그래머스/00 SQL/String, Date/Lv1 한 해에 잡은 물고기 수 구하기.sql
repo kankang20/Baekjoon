@@ -1,0 +1,9 @@
+
+-- Level 1
+
+-- 물고기의 수 AS FISH_COUNT
+    -- 2021년도에 잡은 물고기
+    
+SELECT COUNT(ID) AS FISH_COUNT 
+FROM FISH_INFO
+WHERE TIME LIKE "2021-%"
