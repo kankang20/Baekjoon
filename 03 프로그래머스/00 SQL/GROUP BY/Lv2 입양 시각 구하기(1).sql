@@ -1,0 +1,11 @@
+
+-- Level 2
+
+-- 각 시간대별로 발생한 입양 건수
+    -- 시간대 순으로 정렬
+
+SELECT HOUR(DATETIME) AS HOUR, COUNT(*) as COUNT
+FROM ANIMAL_OUTS
+WHERE HOUR(DATETIME) BETWEEN 9 AND 19
+GROUP BY HOUR 
+ORDER BY HOUR
