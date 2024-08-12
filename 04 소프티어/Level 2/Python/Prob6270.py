@@ -27,5 +27,4 @@ def solution():
 
     # while alen < 100:
 
-    
 print(solution())
