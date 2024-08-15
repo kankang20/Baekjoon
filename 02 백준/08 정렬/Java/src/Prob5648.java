@@ -1,8 +1,8 @@
 
 /**
 * title  : 5648. 역원소 정렬 (Silver 5)
-* time   : 284ms
-* memory : 21648KB
+* time   : 208ms
+* memory : 19748KB
 */
 
 import java.io.*;
@@ -18,13 +18,14 @@ public class Prob5648 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
 
-        String[] numbers = new String[N];
+        Long[] answer = new Long[N];
 
         int idx = 0;
         while (true) {
 
             while (st.hasMoreTokens()) {
-                numbers[idx] = st.nextToken();
+                StringBuilder temp = new StringBuilder(st.nextToken());
+                answer[idx] = Long.valueOf(String.valueOf(temp.reverse()));
                 idx++;
             }
 
@@ -33,20 +34,6 @@ public class Prob5648 {
             }
 
             st = new StringTokenizer(br.readLine());
-        }
-
-        Long[] answer = new Long[N];
-
-        for (int i = 0; i < N; i++) {
-
-            String temp = "";
-            String number = numbers[i];
-
-            for (int j = number.length() - 1; j >= 0 ; j--) {
-                temp += number.charAt(j);
-            }
-
-            answer[i] = Long.valueOf(temp);
         }
 
         Arrays.sort(answer);
