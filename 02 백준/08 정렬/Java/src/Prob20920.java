@@ -1,8 +1,8 @@
 
 /**
 * title  : 20920. 영단어 암기는 괴로워 (Silver 3)
-* time   : ms
-* memory : KB
+* time   : 684ms
+* memory : 37712KB
 */
 
 import java.io.*;
