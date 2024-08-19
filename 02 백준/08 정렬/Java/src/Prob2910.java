@@ -1,8 +1,8 @@
 
 /**
 * title  : 2910. 빈도 정렬 (Silver 3)
-* time   : X
-* memory : 메모리초과
+* time   : 108ms
+* memory : 14532KB
 */
 
 import java.io.*;
@@ -18,24 +18,25 @@ public class Prob2910 {
         int N = Integer.parseInt(st.nextToken());
         int C = Integer.parseInt(st.nextToken());
 
-        int[] posList = new int[C+1];
+        HashMap<Integer, Integer> posMap = new HashMap<>();
         HashMap<Integer, Integer> countMap = new HashMap<>();
 
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
             int num = Integer.parseInt(st.nextToken());
-            if (posList[num] == 0) {
-                posList[num] = (i+1);
+            if (!posMap.containsKey(num)) {
+                posMap.put(num, i);
             }
             countMap.put(num, countMap.getOrDefault(num, 0) + 1);
         }
 
         List<Integer> keySet = new ArrayList<>(countMap.keySet());
+        
         keySet.sort(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
                 if (countMap.get(o1).equals(countMap.get(o2))) {
-                    return posList[o1] - posList[o2];
+                    return posMap.get(o1).compareTo(posMap.get(o2));
                 }
                 return countMap.get(o2).compareTo(countMap.get(o1));
             }
