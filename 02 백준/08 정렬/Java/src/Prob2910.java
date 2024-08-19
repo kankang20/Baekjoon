@@ -1,8 +1,8 @@
 
 /**
 * title  : 2910. 빈도 정렬 (Silver 3)
-* time   : 108ms
-* memory : 14532KB
+* time   : 112ms
+* memory : 14568KB
 */
 
 import java.io.*;
@@ -16,7 +16,7 @@ public class Prob2910 {
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
-        int C = Integer.parseInt(st.nextToken());
+        st.nextToken();                             // int C
 
         HashMap<Integer, Integer> posMap = new HashMap<>();
         HashMap<Integer, Integer> countMap = new HashMap<>();
