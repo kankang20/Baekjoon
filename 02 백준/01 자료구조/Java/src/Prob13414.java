@@ -1,8 +1,8 @@
 
 /**
 * title  : 13414. 수강신청 (Silver 3)
-* time   : 1156ms
-* memory : 70348KB
+* time   : 628ms
+* memory : 65448KB
 */
 
 import java.io.*;
@@ -18,24 +18,28 @@ public class Prob13414 {
         int K = Integer.parseInt(st.nextToken());
         int L = Integer.parseInt(st.nextToken());
 
-        HashMap<String, Integer> studentMap = new HashMap<>();
+        Set<String> studentMap = new LinkedHashSet<>();
+
         for (int i = 0; i < L; i++) {
             String id = br.readLine();
-            studentMap.put(id, i);
+            
+            if (studentMap.contains(id)) {
+                studentMap.remove(id);
+            }
+
+            studentMap.add(id);
         }
 
-        List<String> keySet = new ArrayList<>(studentMap.keySet());
-
-        keySet.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return studentMap.get(o1) - studentMap.get(o2);
-            }
-        });
-
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < K && i < keySet.size(); i++) {
-            sb.append(keySet.get(i)).append("\n");
+
+        int count = 0;
+        for (String id : studentMap) {
+            sb.append(id).append("\n");
+            count++;
+
+            if (K <= count) {
+                break;
+            }
         }
 
         System.out.println(sb);
