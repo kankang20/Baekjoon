@@ -2,7 +2,7 @@
 /**
 * title  : 9375. 패션왕 신해빈 (Silver 3)
 * time   : 104ms
-* memory : 	14244KB
+* memory : 14244KB
 */
 
 import java.io.*;
