@@ -1,8 +1,8 @@
 
 /**
 * title  : 18258. 큐 2 (Silver 4)
-* time   : 1248ms
-* memory : 408720KB
+* time   : 1220ms
+* memory : 407668KB
 */
 
 import java.io.*;
@@ -30,35 +30,19 @@ public class Prob18258 {
                 lastElement = element;
 
             } else if (comm[0].equals("pop")) {
-                if (q.isEmpty()) {
-                    sb.append(-1).append("\n");
-                } else {
-                    sb.append(q.poll()).append("\n");
-                }
+                sb.append(q.isEmpty() ? -1 : q.poll()).append("\n");
 
             } else if (comm[0].equals("size")) {
                 sb.append(q.size()).append("\n");
         
             } else if (comm[0].equals("empty")) {
-                if (q.isEmpty()) {
-                    sb.append(1).append("\n");
-                } else {
-                    sb.append(0).append("\n");
-                }
+                sb.append(q.isEmpty() ? 1 : 0).append("\n");
 
             } else if (comm[0].equals("front")) {
-                if (q.isEmpty()) {
-                    sb.append(-1).append("\n");
-                } else {
-                    sb.append(q.peek()).append("\n");
-                }
+                sb.append(q.isEmpty() ? -1 : q.peek()).append("\n");
 
             } else if (comm[0].equals("back")) {
-                if (q.isEmpty()) {
-                    sb.append(-1).append("\n");
-                } else {
-                    sb.append(lastElement).append("\n");
-                }
+                sb.append(q.isEmpty() ? -1 : lastElement).append("\n");
             } 
         }
         
