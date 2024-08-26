@@ -1,12 +1,13 @@
 
 /**
 * title  : 4358. 생태학 (Silver 2)
-* time   : 596ms
-* memory : 85324KB
+* time   : 768ms
+* memory : 85620KB
 */
 
 import java.io.*;
 import java.util.*;
+import java.util.Map.Entry;
 
 public class Prob4358 {
 
@@ -14,7 +15,7 @@ public class Prob4358 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        HashMap<String, Integer> treeMap = new HashMap<>();
+        TreeMap<String, Integer> treeMap = new TreeMap<>();
         
         String name;
         double allCount = 0;
@@ -27,14 +28,11 @@ public class Prob4358 {
             allCount++;
         }
 
-        List<String> treeList = new ArrayList<>(treeMap.keySet());
-        Collections.sort(treeList);
-
         StringBuilder sb = new StringBuilder();
-        for (String key : treeList) {
-            sb.append(key)
+        for (Entry<String, Integer> tree : treeMap.entrySet()) {
+            sb.append(tree.getKey())
                 .append(" ")
-                .append(String.format("%.4f", treeMap.get(key) / allCount * 100))
+                .append(String.format("%.4f", tree.getValue() / allCount * 100))
                 .append("\n");
         }
 
