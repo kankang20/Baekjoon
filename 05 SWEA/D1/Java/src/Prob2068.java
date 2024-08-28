@@ -2,7 +2,7 @@
 /**
 * title  : 2068. 최대수 구하기 (D1)
 * time   : 103ms
-* memory : 18612MB
+* memory : 18612kb
 */
 
 import java.io.*;
