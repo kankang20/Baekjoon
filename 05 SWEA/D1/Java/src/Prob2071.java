@@ -2,7 +2,7 @@
 /**
 * title  : 2071. 평균값 구하기 (D1)
 * time   : 126ms
-* memory : 19812MB
+* memory : 19812kb
 */
 
 import java.io.*;
