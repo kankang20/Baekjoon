@@ -2,7 +2,7 @@
 /**
 * title  : 2072. 홀수만 더하기 (D1)
 * time   : 102ms
-* memory : 18960MB
+* memory : 18960kb
 */
 
 import java.io.*;
