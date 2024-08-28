@@ -2,7 +2,7 @@
 /**
 * title  : 2070. 큰 놈, 작은 놈, 같은 놈 (D1)
 * time   : 101ms
-* memory : 18364MB
+* memory : 18364kb
 */
 
 import java.io.*;
