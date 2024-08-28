@@ -2,7 +2,7 @@
 /**
 * title  : 2063. 중간값 찾기 (D1)
 * time   : 102ms
-* memory : 19400MB
+* memory : 19400kb
 */
 
 import java.io.*;
