@@ -1,8 +1,8 @@
 
 """
 title  : 2005. 파스칼의 삼각형 (D2)
-time   : ms
-memory : kb
+time   : 110ms
+memory : 44816kb
 """
 
 def solution():
@@ -15,7 +15,6 @@ def solution():
 
         for idx in range(2, N):
             for jdx in range(1, idx):
-                print(idx, jdx)
                 number[idx][jdx] = number[idx-1][jdx-1] + number[idx-1][jdx]
 
         print(f'#{tc}')
