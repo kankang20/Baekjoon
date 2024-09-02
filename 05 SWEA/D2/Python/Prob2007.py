@@ -1,8 +1,8 @@
 
 """
 title  : 2007. 패턴 마디의 길이 (D2)
-time   : ms
-memory : kb
+time   : 102ms
+memory : 44800kb
 """
 
 def solution():
