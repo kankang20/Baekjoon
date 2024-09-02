@@ -1,8 +1,8 @@
 
 /**
 * title  : 1859. 백만 장자 프로젝트 (D2)
-* time   : ms
-* memory : kb
+* time   : 493ms
+* memory : 136140kb
 */
 
 import java.io.*;
