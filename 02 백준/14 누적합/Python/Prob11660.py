@@ -1,8 +1,8 @@
 
 """
 title  : 11660. 구간 합 구하기 5 (Silver 1)
-time   : 시간초과
-memory : 
+time   : 656ms          276ms
+memory : 105932KB       129216KB
 """
 
 import sys
@@ -11,24 +11,15 @@ def solution():
 
     input = sys.stdin.readline
     N, M = map(int, input().split())        # 표의 크기 N, 합을 구해야 하는 횟수 M
+    table = [list(map(int, input().split())) for _ in range(N)]
 
-    array = []
-    for _ in range(N):
-        array.append(list(map(int, input().split())))
-
-    sum_array = [[0] * N for _ in range(N)]
-    for idx in range(N):
-        sum_array[idx][0] = array[idx][0]
-        for jdx in range(1, N):
-            sum_array[idx][jdx] = sum_array[idx][jdx-1] + array[idx][jdx]
+    matrix = [[0] * (N+1) for _ in range(N+1)]
+    for i in range(1, N+1):
+        for j in range(1, N+1):
+            matrix[i][j] = matrix[i-1][j] + matrix[i][j-1] - matrix[i-1][j-1] + table[i-1][j-1]
 
     for _ in range(M):
         x1, y1, x2, y2 = map(int, input().split())
-        
-        answer = 0
-        for idx in range(x1-1, x2):
-            answer += (sum_array[idx][y2-1] - (0 if y1 == 1 else sum_array[idx][y1-2]))
-
-        print(answer)
+        print(matrix[x2][y2] - matrix[x2][y1-1] - matrix[x1-1][y2] + matrix[x1-1][y1-1])
 
 solution()
