@@ -50,7 +50,7 @@ public class Prob4396 {
                     sb.append('.');
                 }
             }
-            sb.append("\n");
+            sb.append("\n"); 
         }
 
         System.out.println(sb);
