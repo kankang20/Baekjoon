@@ -1,8 +1,8 @@
 
 /**
 * title  : 4396. 지뢰 찾기 (Silver 4)
-* time   : ms
-* memory : KB
+* time   : 104ms
+* memory : 14140KB
 */
 
 import java.io.*;
@@ -14,6 +14,7 @@ public class Prob4396 {
 
     private static int N;
     private static char[][] board;
+    private static int[][] answer;
 
     public static void main(String[] args) throws IOException {
 
@@ -22,8 +23,7 @@ public class Prob4396 {
 
         N = Integer.parseInt(br.readLine());
         board = new char[N][N];
-
-        int[][] answer = new int[N][N];
+        answer = new int[N][N];
 
         for (int i = 0; i < N; i++) {
             String temp = br.readLine();
@@ -33,11 +33,17 @@ public class Prob4396 {
             }
         }
 
+        boolean is_bomb = false;
+
         for (int i = 0; i < N; i++) {
             char[] temp = br.readLine().toCharArray();
             for (int j = 0; j < N; j++) {
                 if (temp[j] == 'x') {
-                    answer[i][j] = count_bomb(i, j);
+                    if (board[i][j] == '.') {
+                        answer[i][j] = count_bomb(i, j);
+                    } else if (board[i][j] == '*') {
+                        is_bomb = true;
+                    }
                 }
             }
         }
@@ -46,6 +52,8 @@ public class Prob4396 {
             for (int j = 0; j < N; j++) {
                 if (0 <= answer[i][j]) {
                     sb.append(answer[i][j]);
+                } else if (is_bomb && board[i][j] == '*'){
+                    sb.append('*');
                 } else {
                     sb.append('.');
                 }
@@ -63,7 +71,6 @@ public class Prob4396 {
 
             int nr = row + d[0];
             int nc = col + d[1];
-
             if (0 <= nr && nr < N && 0 <= nc && nc < N && board[nr][nc] == '*') {
                 count++;
             }
