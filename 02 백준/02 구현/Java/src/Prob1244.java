@@ -30,24 +30,33 @@ public class Prob1244 {
             int number = Integer.parseInt(st.nextToken());
 
             if (gender == 1) {  // 남학생
-                while (number < N) {
-                    state[number] = Math.abs(state[number] - 1);
-                    number += number;
+
+                int pos = number;
+                while (pos < N) {
+                    state[pos] = Math.abs(state[pos] - 1);
+                    pos += number;
                 }
             } else {            // 여학생
                 state[number] = Math.abs(state[number] - 1);
 
-                int ln = number;
-                int rn = number;
-                while (0 <= --ln && ++rn < N && state[ln] == state[rn]) {
-                    state[ln] = Math.abs(state[ln] - 1);
-                    state[rn] = Math.abs(state[rn] - 1);
+                int lpos = number;
+                int rpos = number;
+                while (0 <= --lpos && ++rpos < N && state[lpos] == state[rpos]) {
+                    state[lpos] = Math.abs(state[lpos] - 1);
+                    state[rpos] = Math.abs(state[rpos] - 1);
                 }
             }
         }
 
+        StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= N; i++) {
-            System.out.print(state[i] + " ");
+            if (i % 20 == 0) {
+                sb.append(state[i]).append("\n");        
+            } else {
+                sb.append(state[i]).append(" ");
+            }
         }
+
+        System.out.println(sb);
     }
 }
