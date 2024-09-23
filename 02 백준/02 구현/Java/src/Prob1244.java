@@ -1,8 +1,8 @@
 
 /**
 * title  : 1244. 스위치 켜고 끄기 (Silver 4)
-* time   : ms
-* memory : KB
+* time   : 100ms
+* memory : 14248KB
 */
 
 import java.io.*;
@@ -32,7 +32,7 @@ public class Prob1244 {
             if (gender == 1) {  // 남학생
 
                 int pos = number;
-                while (pos < N) {
+                while (pos <= N) {
                     state[pos] = Math.abs(state[pos] - 1);
                     pos += number;
                 }
