@@ -41,7 +41,7 @@ public class Prob1244 {
 
                 int lpos = number;
                 int rpos = number;
-                while (0 <= --lpos && ++rpos < N && state[lpos] == state[rpos]) {
+                while (0 < --lpos && ++rpos <= N && state[lpos] == state[rpos]) {
                     state[lpos] = Math.abs(state[lpos] - 1);
                     state[rpos] = Math.abs(state[rpos] - 1);
                 }
