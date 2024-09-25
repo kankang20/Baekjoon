@@ -1,8 +1,8 @@
 
 /**
 * title  : 20436. ZOAC 3 (Silver 4)
-* time   : ms
-* memory : KB
+* time   : 100ms
+* memory : 14208KB
 */
 
 import java.io.*;
@@ -29,12 +29,10 @@ public class Prob20436 {
 
             if (pos[0] == 2) {
                 answer += (Math.abs(Lpos[1] - pos[1]) + Math.abs(Lpos[2] - pos[2]));
-                Lpos[1] = pos[1];
-                Lpos[2] = pos[2];        
+                Lpos = pos;        
             } else {
                 answer += (Math.abs(Rpos[1] - pos[1]) + Math.abs(Rpos[2] - pos[2]));
-                Rpos[1] = pos[1];
-                Rpos[2] = pos[2];
+                Rpos = pos;
             }
 
             answer += 1;
