@@ -20,19 +20,27 @@ public class Prob20436 {
         int[] Lpos = wordMap.get(st.nextToken().charAt(0));
         int[] Rpos = wordMap.get(st.nextToken().charAt(0));
 
+        int answer = 0;
+
         String word = br.readLine();
         for (int i = 0; i < word.length(); i++) {
 
             int[] pos = wordMap.get(word.charAt(i));
 
             if (pos[0] == 2) {
-                
+                answer += (Math.abs(Lpos[1] - pos[1]) + Math.abs(Lpos[2] - pos[2]));
+                Lpos[1] = pos[1];
+                Lpos[2] = pos[2];        
             } else {
-
+                answer += (Math.abs(Rpos[1] - pos[1]) + Math.abs(Rpos[2] - pos[2]));
+                Rpos[1] = pos[1];
+                Rpos[2] = pos[2];
             }
-        }
-        
 
+            answer += 1;
+        }
+
+        System.out.println(answer);
     }
 
     public static HashMap<Character, int[]> makeWordMap() {
