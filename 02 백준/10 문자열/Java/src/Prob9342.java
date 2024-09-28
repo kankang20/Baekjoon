@@ -1,0 +1,38 @@
+
+/**
+ * title  : 9342. 염색체 (Silver 3)
+ * time   : ms
+ * memory : KB
+ */
+
+import java.io.*;
+import java.util.*;
+
+public class Prob9342 {
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+
+        String pattern = "^[ABCDEF][A+][F+][C+][ABCDEF]?$";
+
+        int N = Integer.parseInt(br.readLine());
+        for (int i = 0; i < N; i++) {
+
+            String word = br.readLine();
+            
+            if (word.matches(pattern)) {
+                sb.append("Infected!").append("\n");
+                System.out.println("oo");
+            } else {
+                sb.append("Good").append("\n");
+                System.out.println("xx");
+            }
+
+            
+        }
+        
+        System.out.println(sb);
+    }
+}
