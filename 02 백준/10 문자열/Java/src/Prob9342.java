@@ -1,9 +1,9 @@
 
 /**
- * title  : 9342. 염색체 (Silver 3)
- * time   : ms
- * memory : KB
- */
+* title  : 9342. 염색체 (Silver 3)
+* time   : 108ms
+* memory : 14176KB
+*/
 
 import java.io.*;
 import java.util.*;
@@ -15,7 +15,7 @@ public class Prob9342 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
-        String pattern = "^[ABCDEF][A+][F+][C+][ABCDEF]?$";
+        String pattern = "^[ABCDEF]?A+F+C+[ABCDEF]?$";
 
         int N = Integer.parseInt(br.readLine());
         for (int i = 0; i < N; i++) {
@@ -24,13 +24,9 @@ public class Prob9342 {
             
             if (word.matches(pattern)) {
                 sb.append("Infected!").append("\n");
-                System.out.println("oo");
             } else {
                 sb.append("Good").append("\n");
-                System.out.println("xx");
             }
-
-            
         }
         
         System.out.println(sb);
