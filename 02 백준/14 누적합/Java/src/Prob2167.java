@@ -28,14 +28,28 @@ public class Prob2167 {
         }
 
         int[][] answer = new int[N][M];
+        
+        answer[0][0] = board[0][0];
+
+        for(int i = 1; i < N; i++) {
+            answer[i][0] = board[i][0] + answer[i-1][0];
+        }
+
+        for(int j = 1; j < M; j++) {
+            answer[0][j] = board[0][j] + answer[0][j-1];
+        }
+
         for (int i = 1; i < N; i++) {
             for (int j = 1; j < M; j++) {
-                if (i == 0 || j == 0) {
-                    answer[i][j] = board[i][j];
-                } else {
-                    answer[i][j] = answer[i-1][j] + answer[i][j-1] - board[i-1][j-1];
-                }
+                answer[i][j] = board[i][j] + answer[i-1][j] + answer[i][j-1] - answer[i-1][j-1];
             }
+        }
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                System.out.print(answer[i][j] + " ");
+            }
+            System.out.println();
         }
 
         int K = Integer.parseInt(br.readLine());
@@ -43,8 +57,8 @@ public class Prob2167 {
             st = new StringTokenizer(br.readLine());
             int r1 = Integer.parseInt(st.nextToken())-1;
             int c1 = Integer.parseInt(st.nextToken())-1;
-            int r2 = Integer.parseInt(st.nextToken())-1;
-            int c2 = Integer.parseInt(st.nextToken())-1; 
+            int r2 = Integer.parseInt(st.nextToken());
+            int c2 = Integer.parseInt(st.nextToken()); 
             sb.append(answer[r2][c2] - answer[r1][c1]).append("\n");
         }
 
