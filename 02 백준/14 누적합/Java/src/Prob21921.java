@@ -25,15 +25,28 @@ public class Prob21921 {
             record[i] = Integer.parseInt(st.nextToken());
         }
 
-        int maxValue = 0;
         int tempValue = 0;
-
         for (int i = 0; i < X; i++) {
             tempValue += record[i];
         }
 
+        int maxValue = tempValue;
+        int maxCount = 0;
         for (int i = X; i < N; i++) {
-            
+            tempValue += (record[i] - record[i-X]);
+            if (maxValue == tempValue) {
+                maxCount++;
+            } else if (maxValue < tempValue) {
+                maxValue = tempValue;
+                maxCount = 1;
+            }
+        }
+
+        if (maxValue == 0) {
+            System.out.println("SAD");
+        } else {
+            System.out.println(maxValue);
+            System.out.println(maxCount);
         }
     }
 }
